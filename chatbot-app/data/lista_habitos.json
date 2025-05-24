@@ -1,0 +1,24 @@
+{
+    "id_99": "lista_habitos",
+    "mensaje": "Entiendo que tu ánimo y bienestar están mejorando 😊. Te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
+    "opciones": [
+        {"texto": "Hidratación consciente: toma agua con calma y disfruta ese momento para ti. 🧊", 
+            "siguiente": ""},
+        {"texto": "Evita la cafeína o estimulantes en exceso para mantener tu mente más tranquila. ☕", 
+            "siguiente": ""},
+        {"texto": "Come comidas balanceadas y regulares para mantener tu energía estable durante el día. 🍽️", 
+            "siguiente": ""},
+        {"texto": "Incluye alimentos ricos en magnesio como almendras, espinacas y semillas de calabaza para relajar tu cuerpo. 🌰", 
+            "siguiente": ""},
+        {"texto": "Consume Omega-3 con pescados grasos, nueces o semillas para apoyar tu bienestar mental. 🐟", 
+            "siguiente": ""},
+        {"texto": "Reduce el azúcar refinada para evitar altibajos de energía que afectan tu ánimo. 🍬🚫", 
+            "siguiente": ""},
+        {"texto": "Bebe té de hierbas relajantes como manzanilla o lavanda para calmarte naturalmente. 🍵", 
+            "siguiente": ""},
+        {"texto": "Limita el consumo de alcohol, ya que puede aumentar la ansiedad y afectar tu sueño. 🍷🚫", 
+            "siguiente": ""},
+        {"texto": "Realiza comidas conscientes: come despacio y disfruta cada bocado para reducir el estrés. 🥢", 
+            "siguiente": ""}
+    ]
+}

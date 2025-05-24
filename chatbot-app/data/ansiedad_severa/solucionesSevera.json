@@ -1,0 +1,116 @@
+{
+  "id_30": "terapia_cognitivo_conductual",
+  "mensaje_30": "Vamos a desafiar de frente esos pensamientos que disparan tu ansiedad. Con amabilidad, aprenderás a detener el diálogo interno negativo y sustituirlo por ideas más realistas y compasivas. 🧠✨",
+  "opciones_30": [
+    {
+      "texto": "Escribe tu pensamiento más angustiante; luego anota tres evidencias que lo contradigan. 📝",
+      "multimedia": "",
+      "siguiente": "id_31"
+    },
+    {
+      "texto": "Graba una nota de voz describiendo tu temor, después responde con consejos para un amigo. 🎙️",
+      "multimedia": "",
+      "siguiente": "id_31"
+    },
+    {
+      "texto": "Selecciona un pensamiento catastrófico de la lista y elige evidencias opuestas pre-cargadas. 📋",
+      "multimedia": "",
+      "siguiente": "id_31"
+    }
+  ],
+
+  "id_31": "terapia_aceptacion_compromiso",
+  "mensaje_31": "Observa la ansiedad sin pelear; identifica un valor importante (familia, salud, creatividad) y da un paso pequeño hacia él, incluso con miedo presente. 🎯💪",
+  "opciones_31": [
+    {
+      "texto": "Elige tu valor principal y planifica una acción de 5 min para hoy. ✅",
+      "multimedia": "",
+      "siguiente": "id_32"
+    },
+    {
+      "texto": "Medita 2 min repitiendo: “La ansiedad puede venir, pero yo avanzo hacia lo valioso”. 🧘",
+      "multimedia": "",
+      "siguiente": "id_32"
+    },
+    {
+      "texto": "Escribe un compromiso: “Aunque sienta miedo, llamaré a…”, y mándate un recordatorio. 📩",
+      "multimedia": "",
+      "siguiente": "id_32"
+    }
+  ],
+
+  "id_32": "relajacion_muscular_progresiva",
+  "mensaje_32": "Al tensar y soltar grupos musculares, envías al cerebro señales de seguridad. Practicaremos de cabeza a pies, liberando tensión acumulada. 💤🦶",
+  "opciones_32": [
+    {
+      "texto": "Audio 8 min; campana indica “tensa 5 s, suelta 7 s”. 🎧",
+      "multimedia": "",
+      "siguiente": "id_33"
+    },
+    {
+      "texto": "Checklist de 10 zonas; marca al completar y ve progreso. ✔️",
+      "multimedia": "",
+      "siguiente": "id_33"
+    }
+  ],
+
+  "id_33": "respiracion_alternada_fosas",
+  "mensaje_33": "Probemos una respiración yóguica muy potente: alternar fosas nasales equilibra tu sistema nervioso y despeja la mente en pocos minutos. ¿Te animas a intentarlo ahora mismo?",
+  "opciones_33": [
+    {
+      "texto": "Persona tapando suavemente una fosa, inhalando, cambiando y exhalando, acompañado de subtítulos «Cierra / Inhala / Cambia / Exhala».",
+      "multimedia": "",
+      "siguiente": "id_34"
+    },
+    {
+      "texto": "Campanas suaves que marcan los cambios de fosa nasal cada ciclo, más guía verbal lenta.",
+      "multimedia": "",
+      "siguiente": "id_34"
+    }
+  ],
+
+  "id_34": "tecnica_stop_detallada",
+  "mensaje_34": "Técnica Stop Detallada: Detente un instante, deja que tu mente ponga el freno. Luego respiraremos y elegiremos el siguiente paso con intención renovada.",
+  "opciones_34": [
+    {
+      "texto": "Pantalla que muestra STOP paso a paso, con botón «Siguiente» tras respiración de 4 s.",
+      "multimedia": "",
+      "siguiente": "id_35"
+    },
+    {
+      "texto": "Clip minimalista que ilustra S-T-O-P con texto grande y música serena.",
+      "multimedia": "",
+      "siguiente": "id_35"
+    }
+  ],
+
+  "id_35": "evitar_pensamientos_catastroficos",
+  "mensaje_35": "Anota tus peores “y si…?”. Luego les responderemos con datos o ejemplos reales para restarles fuerza.",
+  "opciones_35": [
+    {
+      "texto": "Campo para escribir pensamiento → tabla de “Evidencias a favor / en contra”",
+      "multimedia": "",
+      "siguiente": null
+    },
+    {
+      "texto": "Chat guiado estilo burbujas con 4 preguntas sucesivas y campo breve para responder.",
+      "multimedia": "",
+      "siguiente": null
+    }
+  ],
+
+  "id_36": "breves_pausas_conciencia",
+  "mensaje_36": "Perfecto, hacer breves pausas de conciencia plena te ayuda a sentirte mejor. Toma pequeños momentos durante el día para respirar y relajarte. 🌿",
+  "opciones_36": [
+    {
+      "texto": "Tómate un minuto para cerrar los ojos, respirar profundo y soltar la tensión. 🌬️",
+      "multimedia": "",
+      "siguiente": null
+    },
+    {
+      "texto": "Busca un momento tranquilo para inhalar por la nariz y exhalar por la boca. 🧘‍♂️",
+      "multimedia": "",
+      "siguiente": null
+    }
+  ]
+}

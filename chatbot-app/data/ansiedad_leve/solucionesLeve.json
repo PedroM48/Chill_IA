@@ -1,33 +1,91 @@
 {
-  "id_1": "respiracion_diafragmatica",
-  "mensaje_1": "Empecemos con una respiración diafragmática, ¿La conoces?, chill, hagámosla juntos.",
+  "id_10": "respiracion_diapragmatica",
+  "mensaje_1": "Empecemos con una respiración diafragmática, ¿La conoces? Chill, hagámosla juntos.",
   "opciones_1": [
-    { "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨", 
-        "siguiente": "evaluacion_inicio",
-        "contenido_visual":""},
-    { "texto": "Vamos paso a paso. Te iré guiando tranqui. Solo sigue estas indicaciones:\n • Siéntate cómodo/a. 🙋‍♂️\n • Inhala por la nariz 4 segundos, haciendo que tu abdomen se expanda. 😶‍🌫️\n • Exhala suave por la boca 6 segundos, sintiendo cómo baja la tensión. 🫠",
-        "siguiente": "relajacion_menu",
-        "contenido_visual":""},
-    { "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂", 
-        "siguiente": "despedida",
-        "contenido_visual":""}
+    {
+      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
+      "multimedia": "",
+      "siguiente": "id_11"
+    },
+    {
+      "texto": "Vamos paso a paso. Te iré guiando tranqui. Solo sigue estas indicaciones:\n• Siéntate cómodo/a. 🙋‍♂️\n• Inhala por la nariz 4 segundos, haciendo que tu abdomen se expanda. 😶‍🌫️\n• Exhala suave por la boca 6 segundos, sintiendo cómo baja la tensión. 🫠",
+      "multimedia": "",
+      "siguiente": "id_11"
+    },
+    {
+      "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂",
+      "multimedia": "",
+      "siguiente": "id_11"
+    }
   ],
-  "id_2": "ejercicio_5-4-3-2-1",
-  "mensaje_2": "Mmm.. entiendo, hagamos de que te sientas mucho mejor. Hagamos otra actividad, ¿vale? ¿conoces el ejercicio 5-4-3-2-1? ",
+  "id_11": "ejercicio_5_4_3_2_1",
+  "mensaje_2": "Mmm.. entiendo, hagamos de que te sientas mucho mejor. ¿Conoces el ejercicio 5-4-3-2-1?",
   "opciones_2": [
-    { "texto": "", 
-        "siguiente": "Mira y nombra 5 cosas que puedas ver alrededor. 👀
-Toca y siente 4 objetos que tengas cerca. ✋
-Escucha 3 sonidos que puedas oír ahora. 👂
-Percibe 2 olores que estés sintiendo o imagina alguno. 👃
-Saborea 1 cosa, aunque sea el sabor de tu boca. 👅
-,
-        "contenido_visual":""},
-    { "texto": "",
-        "siguiente": "relajacion_menu",
-        "contenido_visual":""},
-    { "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂", 
-        "siguiente": "despedida",
-        "contenido_visual":""}
+    {
+      "texto": "Mira y nombra 5 cosas que puedas ver alrededor. 👀\nToca y siente 4 objetos que tengas cerca. ✋\nEscucha 3 sonidos que puedas oír ahora. 👂\nPercibe 2 olores que estés sintiendo o imagina alguno. 👃\nSaborea 1 cosa, aunque sea el sabor de tu boca. 👅",
+      "siguiente": "id_12"
+    },
+    {
+      "texto": "Paso 1: Elige o escribe 5 cosas que ves.\nPaso 2: Elige o escribe 4 cosas que tocas.\nPaso 3: Elige o escribe 3 sonidos que escuchas.\nPaso 4: Elige o escribe 2 olores que sientes.\nPaso 5: Elige o escribe 1 sabor que tengas o imagines.",
+      "siguiente": "id_12"
+    }
+  ],
+  "id_12": "estiramientos_caminar",
+  "mensaje_3": "Ahora, vamos a mover un poco el cuerpo para liberar tensión. Puedes estirarte donde estés o salir a caminar sin celular por 5 a 10 minutos.",
+  "opciones_3": [
+    {
+      "texto": "Caminar sin celular por 5 a 10 minutos.",
+      "siguiente": ""
+    },
+    {
+      "texto": "Realizar estiramientos.",
+      "siguiente": ""
+    }
+  ],
+  "id_13": "cancion_relajante",
+  "mensaje_5": "Vale, hagamos un ejercicio práctico 😊. Escuchemos una música relajante para aliviar mejor esas últimas tensiones que aún tienes.",
+  "opciones_5": [
+    {
+      "texto": "Te dejo esta canción instrumental relajante para que la escuches mientras te tomas un momento para ti. 🎶🎧",
+      "multimedia": "",
+      "siguiente": "id_6"
+    },
+    {
+      "texto": "Cuando sientas que necesitas bajar el ritmo, poner una canción instrumental puede ayudarte a relajarte y despejar la mente. 🎶🎧",
+      "multimedia": "",
+      "siguiente": "id_6"
+    }
+  ],
+  "id_14": "journaling_emocional",
+  "mensaje_6": "Perfecto, ¿sabes lo que es el Journaling Emocional Ocasional? Escribir lo que sientes puede liberar la mente y aliviar el estrés. 🫂",
+  "opciones_6": [
+    {
+      "texto": "Tómate un momento para escribir unas líneas sobre cómo te sientes ahora. No tiene que ser perfecto, solo lo que te venga a la mente. 📩",
+      "siguiente": ""
+    },
+    {
+      "texto": "¿Puedes escribir sobre una situación que te haya pesado últimamente? Solo cuéntalo como si se lo contaras a un amigo. 📩",
+      "siguiente": ""
+    },
+    {
+      "texto": "Escribe algo bueno que haya pasado hoy, por pequeño que sea. Esto ayuda a equilibrar la mente y el ánimo. 📩",
+      "siguiente": ""
+    }
+  ],
+  "id_15": "pausas_conciencia",
+  "mensaje_7": "Perfecto, hacer breves pausas de conciencia plena te ayuda a sentirte mejor. Toma pequeños momentos durante el día para respirar y relajarte. 🌿",
+  "opciones_7": [
+    {
+      "texto": "Tómate un minuto para cerrar los ojos, respirar profundo y soltar la tensión. No necesitas más que eso. 🌬️",
+      "siguiente": ""
+    },
+    {
+      "texto": "Durante el día, busca un momento tranquilo para inhalar lentamente por la nariz y exhalar despacio por la boca, repitiendo varias veces. 🧘‍♂️",
+      "siguiente": ""
+    },
+    {
+      "texto": "Si te sientes agobiado/a, haz una pausa corta, siente tus pies en el suelo y presta atención a tu respiración por un momento. 👣",
+      "siguiente": ""
+    }
   ]
 }
