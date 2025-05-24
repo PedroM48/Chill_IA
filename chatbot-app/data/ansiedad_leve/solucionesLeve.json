@@ -1,0 +1,33 @@
+{
+  "id_1": "respiracion_diafragmatica",
+  "mensaje_1": "Empecemos con una respiración diafragmática, ¿La conoces?, chill, hagámosla juntos.",
+  "opciones_1": [
+    { "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨", 
+        "siguiente": "evaluacion_inicio",
+        "contenido_visual":""},
+    { "texto": "Vamos paso a paso. Te iré guiando tranqui. Solo sigue estas indicaciones:\n • Siéntate cómodo/a. 🙋‍♂️\n • Inhala por la nariz 4 segundos, haciendo que tu abdomen se expanda. 😶‍🌫️\n • Exhala suave por la boca 6 segundos, sintiendo cómo baja la tensión. 🫠",
+        "siguiente": "relajacion_menu",
+        "contenido_visual":""},
+    { "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂", 
+        "siguiente": "despedida",
+        "contenido_visual":""}
+  ],
+  "id_2": "ejercicio_5-4-3-2-1",
+  "mensaje_2": "Mmm.. entiendo, hagamos de que te sientas mucho mejor. Hagamos otra actividad, ¿vale? ¿conoces el ejercicio 5-4-3-2-1? ",
+  "opciones_2": [
+    { "texto": "", 
+        "siguiente": "Mira y nombra 5 cosas que puedas ver alrededor. 👀
+Toca y siente 4 objetos que tengas cerca. ✋
+Escucha 3 sonidos que puedas oír ahora. 👂
+Percibe 2 olores que estés sintiendo o imagina alguno. 👃
+Saborea 1 cosa, aunque sea el sabor de tu boca. 👅
+,
+        "contenido_visual":""},
+    { "texto": "",
+        "siguiente": "relajacion_menu",
+        "contenido_visual":""},
+    { "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂", 
+        "siguiente": "despedida",
+        "contenido_visual":""}
+  ]
+}
