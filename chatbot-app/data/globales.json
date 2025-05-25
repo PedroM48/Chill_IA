@@ -1,7 +1,7 @@
 {
     "id_99": "lista_habitos",
-    "mensaje": "Entiendo que tu ánimo y bienestar están mejorando 😊. Te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
-    "opciones": [
+    "mensaje_99": "Entiendo que tu ánimo y bienestar están mejorando 😊. Te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
+    "opciones_99": [
         {"texto": "Hidratación consciente: toma agua con calma y disfruta ese momento para ti. 🧊", 
             "siguiente": ""},
         {"texto": "Evita la cafeína o estimulantes en exceso para mantener tu mente más tranquila. ☕", 
@@ -20,5 +20,21 @@
             "siguiente": ""},
         {"texto": "Realiza comidas conscientes: come despacio y disfruta cada bocado para reducir el estrés. 🥢", 
             "siguiente": ""}
+    ],
+    "id_999":"mensaje_evaluacion",
+    "mensaje_999":"Bien hecho ✨. Ahora, tómate un segundito... ¿cómo te sientes después de haber respirado así?",
+    "opciones_999": [
+      { "texto": "🙌 Más tranquilo/a",   "siguiente": "{{nextAfterEval}}" },
+      { "texto": "😌 Un poco mejor",     "siguiente": "{{nextAfterEval}}" },
+      { "texto": "🤷 Igual que antes",   "siguiente": "{{nextAfterEval}}" },
+      { "texto": "🫠 Todavía me cuesta", "siguiente": "{{nextAfterEval}}" }
+    ],
+    "id_9999":"mensaje_cierre",
+    "mensaje_9999":"Bien hecho ✨. Ahora, tómate un segundito... ¿cómo te sientes después de haber respirado así?",
+    "opciones_9999": [
+      { "texto": "🙌 Más tranquilo/a",   "siguiente": "{{nextAfterEval}}" },
+      { "texto": "😌 Un poco mejor",     "siguiente": "{{nextAfterEval}}" },
+      { "texto": "🤷 Igual que antes",   "siguiente": "{{nextAfterEval}}" },
+      { "texto": "🫠 Todavía me cuesta", "siguiente": "{{nextAfterEval}}" }
     ]
 }

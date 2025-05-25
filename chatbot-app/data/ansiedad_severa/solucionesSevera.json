@@ -5,17 +5,20 @@
     {
       "texto": "Escribe tu pensamiento más angustiante; luego anota tres evidencias que lo contradigan. 📝",
       "multimedia": "",
-      "siguiente": "id_31"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_31"
     },
     {
       "texto": "Graba una nota de voz describiendo tu temor, después responde con consejos para un amigo. 🎙️",
       "multimedia": "",
-      "siguiente": "id_31"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_31"
     },
     {
       "texto": "Selecciona un pensamiento catastrófico de la lista y elige evidencias opuestas pre-cargadas. 📋",
       "multimedia": "",
-      "siguiente": "id_31"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_31"
     }
   ],
 
@@ -25,17 +28,20 @@
     {
       "texto": "Elige tu valor principal y planifica una acción de 5 min para hoy. ✅",
       "multimedia": "",
-      "siguiente": "id_32"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_32"
     },
     {
       "texto": "Medita 2 min repitiendo: “La ansiedad puede venir, pero yo avanzo hacia lo valioso”. 🧘",
       "multimedia": "",
-      "siguiente": "id_32"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_32"
     },
     {
       "texto": "Escribe un compromiso: “Aunque sienta miedo, llamaré a…”, y mándate un recordatorio. 📩",
       "multimedia": "",
-      "siguiente": "id_32"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_32"
     }
   ],
 
@@ -45,12 +51,14 @@
     {
       "texto": "Audio 8 min; campana indica “tensa 5 s, suelta 7 s”. 🎧",
       "multimedia": "",
-      "siguiente": "id_33"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_33"
     },
     {
       "texto": "Checklist de 10 zonas; marca al completar y ve progreso. ✔️",
       "multimedia": "",
-      "siguiente": "id_33"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_33"
     }
   ],
 
@@ -60,12 +68,14 @@
     {
       "texto": "Persona tapando suavemente una fosa, inhalando, cambiando y exhalando, acompañado de subtítulos «Cierra / Inhala / Cambia / Exhala».",
       "multimedia": "",
-      "siguiente": "id_34"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_34"
     },
     {
       "texto": "Campanas suaves que marcan los cambios de fosa nasal cada ciclo, más guía verbal lenta.",
       "multimedia": "",
-      "siguiente": "id_34"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_34"
     }
   ],
 
@@ -75,12 +85,14 @@
     {
       "texto": "Pantalla que muestra STOP paso a paso, con botón «Siguiente» tras respiración de 4 s.",
       "multimedia": "",
-      "siguiente": "id_35"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_35"
     },
     {
       "texto": "Clip minimalista que ilustra S-T-O-P con texto grande y música serena.",
       "multimedia": "",
-      "siguiente": "id_35"
+      "siguiente": "id_999",
+      "nextAfterEval": "id_35"
     }
   ],
 
@@ -90,12 +102,14 @@
     {
       "texto": "Campo para escribir pensamiento → tabla de “Evidencias a favor / en contra”",
       "multimedia": "",
-      "siguiente": null
+      "siguiente": "id_999",
+      "nextAfterEval": "id_36"
     },
     {
       "texto": "Chat guiado estilo burbujas con 4 preguntas sucesivas y campo breve para responder.",
       "multimedia": "",
-      "siguiente": null
+      "siguiente": "id_999",
+      "nextAfterEval": "id_36"
     }
   ],
 
@@ -105,12 +119,14 @@
     {
       "texto": "Tómate un minuto para cerrar los ojos, respirar profundo y soltar la tensión. 🌬️",
       "multimedia": "",
-      "siguiente": null
+      "siguiente": "id_999",
+      "nextAfterEval": "id_37"
     },
     {
       "texto": "Busca un momento tranquilo para inhalar por la nariz y exhalar por la boca. 🧘‍♂️",
       "multimedia": "",
-      "siguiente": null
+      "siguiente": "id_999",
+      "nextAfterEval": "id_37"
     }
   ]
 }

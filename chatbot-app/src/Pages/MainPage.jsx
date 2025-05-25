@@ -63,8 +63,6 @@ function MainPage() {
     }
   };
 
-  console.log("API Key:", process.env.REACT_APP_OPENAI_API_KEY);
-
   return (
     <div className="chat-container">
       <h1>CHILL IA 🤙</h1>

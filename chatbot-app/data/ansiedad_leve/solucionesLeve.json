@@ -5,7 +5,9 @@
     {
       "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
       "multimedia": "",
-      "siguiente": "id_11"
+      "evaluacion":"id_",
+      "siguiente": "id_999",
+      "nextAfterEval": "id_11"
     },
     {
       "texto": "Vamos paso a paso. Te iré guiando tranqui. Solo sigue estas indicaciones:\n• Siéntate cómodo/a. 🙋‍♂️\n• Inhala por la nariz 4 segundos, haciendo que tu abdomen se expanda. 😶‍🌫️\n• Exhala suave por la boca 6 segundos, sintiendo cómo baja la tensión. 🫠",
