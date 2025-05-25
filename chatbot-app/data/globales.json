@@ -21,6 +21,7 @@
         {"texto": "Realiza comidas conscientes: come despacio y disfruta cada bocado para reducir el estrés. 🥢", 
             "siguiente": "id_1003"}
     ],
+
     "id_1002":"mensaje_evaluacion",
     "mensaje_1002":"Bien hecho ✨. Ahora, tómate un segundito... ¿cómo te sientes después de haber respirado así?",
     "opciones_1002": [
@@ -29,17 +30,177 @@
       { "texto": "🤷 Igual que antes",   "siguiente": "{{nextAfterEval}}" },
       { "texto": "🫠 Todavía me cuesta", "siguiente": "{{nextAfterEval}}" }
     ],
+
     "id_1003":"mensaje_cierre",
     "mensaje_1003":"Recuerda que siempre puedes escribirme cuando necesites, especialmente si vuelves a enfrentar algo parecido. Aquí estaré para acompañarte 🤗",
     "opciones_1003": [
       { "texto": "Volver al Inicio",   "siguiente": "id_1004" },
       { "texto": "Salir",     "siguiente": null }
     ],
+
     "id_1004":"mensaje_bienvenida",
     "mensaje_1004":"Hola [Nombre], ¿qué tal? 👋 Soy Chill IA, tu amigo virtual para esos momentos en los que la ansiedad te quiere ganar 😵‍💫. Estoy aquí para acompañarte, tranqui 😌, sin presiones ni nada por el estilo. Si quieres, podemos tomarnos un rato chill para hablar de tu situación 🧘‍♂️.",
     "opciones_1004": [
       { "texto": "✅ Sí, claro 😌",   "siguiente": "id_1005" },
       { "texto": "😮‍💨 Solo quiero relajarme un toque",     "siguiente": "id_1006" },
       { "texto": "🕓 No ahora, tal vez después",     "siguiente": "id_1007" }
-    ]
+    ],
+
+    "id_1005":"si_claro",
+    "mensaje_1005":"Hola [Nombre], ¿qué tal? 👋 Soy Chill IA, tu amigo virtual para esos momentos en los que la ansiedad te quiere ganar 😵‍💫. Estoy aquí para acompañarte, tranqui 😌, sin presiones ni nada por el estilo. Si quieres, podemos tomarnos un rato chill para hablar de tu situación 🧘‍♂️.",
+    "opciones_1005": [
+      { "texto": "✅ Sí, claro 😌",   "siguiente": "id_1005" },
+      { "texto": "😮‍💨 Solo quiero relajarme un toque",     "siguiente": "id_1006" },
+      { "texto": "🕓 No ahora, tal vez después",     "siguiente": "id_1007" }
+    ],
+    "id_10051":"si_claro_inicio1",
+    "mensaje_10051":"Genial 😌 Antes de darte algunas preguntas que te puedan determinar el nivel de ansiedad que tienes, quiero conocerte un poquito mejor. Tranqui, no hay respuestas buenas ni malas. 💆‍♂️\n Primero que nada… dime algo: ¿cómo ha estado tu mente últimamente? (sé honesto/a) 🤗",
+    "opciones_10051": [
+      { "texto": "🙃 Medio agitado/a",   "siguiente": "id_10052" },
+      { "texto": "😶‍🌫️ Cansado/a",     "siguiente": "id_10052" },
+      { "texto": "😌 Tranquilo/a",     "siguiente": "id_10052" },
+      { "texto": "🤯 En mil cosas",     "siguiente": "id_10052" }
+    ],
+    "id_10052":"si_claro_inicio2",
+    "mensaje_10052":"Gracias por contarme eso. Y coméntame… ¿qué estuviste haciendo? 😌",
+    "opciones_10052": [
+      { "texto": "📱 Scrolleando en redes",   "siguiente": "id_10053" },
+      { "texto": "📚 Estudiando o trabajando",     "siguiente": "id_10053" },
+      { "texto": "😶‍🌫️ Nada, solo pensando",     "siguiente": "id_10053" },
+      { "texto": "😴 Tratando de descansar",     "siguiente": "id_10053" }
+    ],
+    "id_10053":"si_claro_inicio3",
+    "mensaje_10053":"Y si tuvieras que ponerle un nombre a cómo te sientes ahorita... ¿cuál sería? 😳",
+    "opciones_10053": [
+      { "texto": "😵‍💫 Acelerado/a",   "siguiente": "id_10061" },
+      { "texto": "😔 Bajoneado/a",     "siguiente": "id_10062" },
+      { "texto": "😐 Apagado/a",     "siguiente": "id_10063" },
+      { "texto": "🤷 No sé cómo me siento",     "siguiente": "id_10063" }
+    ],
+
+    "id_1006":"solo_relajarme_rato",
+    "mensaje_1006":"Perfecto, esto es un espacio para eso justamente. Aquí tienes algunas formas tranquis de darte un respiro 😮‍💨. Elige la que más se te antoje:",
+    "opciones_1006": [
+      { "texto": "🌬️ Respirar juntos un minuto",   "siguiente": "id_10061" },
+      { "texto": "🎵 Escuchar sonidos relajantes",     "siguiente": "id_10062" },
+      { "texto": "🧘‍♀️ Ver algo que calme la mente",     "siguiente": "id_10063" }
+    ],
+    "id_10061":"solo_relajarme_rato_respiracion",
+    "mensaje_10061":"Respiremos juntos con calma. Solo sigue el ritmo del cuadrado que se mueve. Inhala… retén… exhala… retén… y repite. Solo eso 😌",
+    "opciones_10061": [
+      { "texto": "🌬️ Respirar juntos un minuto",   
+        "siguiente": "id_10064",
+        "multimedia": "" }
+    ],
+    "id_10062":"solo_relajarme_rato_sonidos_relajantes",
+    "mensaje_10062":"Elige tu mood 😎:",
+    "opciones_10062": [
+      { "texto": "🎧 Lluvia suave",   
+        "siguiente": "id_10064",
+        "multimedia": "" },
+      { "texto": "🌊 Olas del mars",     
+        "siguiente": "id_10064",
+        "multimedia": "" },
+      { "texto": "🔥 Fuego de chimenea",     
+        "siguiente": "id_10064",
+        "multimedia": "" },
+      { "texto": "🔔 Cuencos tibetanos",     
+        "siguiente": "id_10064",
+        "multimedia": "" }
+    ],
+    "id_10063":"solo_relajarme_rato_video",
+    "mensaje_10063":"Te dejo este video cortito para que te desconectes un rato 👇:",
+    "opciones_10063": [
+      { "texto": "🎴Video corto de naturaleza + música suave",
+        "siguiente": "id_10064",
+        "multimedia": "" },
+      { "texto": "💡Animación relajante",     
+        "siguiente": "id_10064",
+        "multimedia": "" },
+      { "texto": "💫Timelapse del cielo o naturaleza",     
+        "siguiente": "id_10064",
+        "multimedia": "" }
+    ],
+    "id_10064":"solo_relajarme_rato_evaluacion",
+    "mensaje_10064":"¿Te sientes un poco mejor? Puedes volver cuando quieras o seguir relajándote un rato más.",
+    "opciones_10064": [
+      { "texto": "Volver al Inicio",   "siguiente": "id_1004" },
+      { "texto": "Seguir relajándome",     "siguiente": "id_1006" },
+      { "texto": "Salir",     "siguiente": null }
+    ],
+
+    "id_1007":"no_ahora",
+    "mensaje_1007":"Tranqui, no hay apuro. Tómate tu tiempo y cuando quieras, volvemos a hablar 😁",
+    "opciones_1007": [
+      { "texto": "🫂",   "siguiente": "id_1003" }
+    ],
+
+    "id_1008":"escala_GAD-7",
+    "mensaje_1008":"Todo suma. Ahora quiero hacerte unas preguntitas tranquis para ver cómo has venido llevando los días🫂.",
+    "opciones_1008": {
+      "id_10081": 1,
+      "text_10081": "¿Con qué frecuencia te sientes nervioso/a, ansioso/a o con los nervios de punta?",
+      "options_10081": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ],
+      "id_10082": 2,
+      "text_10082": "¿Qué tan seguido sientes que no puedes parar o controlar tus preocupaciones?",
+      "options_10082": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ],
+      "id_10083": 3,
+      "text_10083": "¿Te preocupas demasiado por diferentes cosas?",
+      "options_10083": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ],
+      "id_10084": 4,
+      "text_10084": "¿Te cuesta relajarte, incluso cuando quieres hacerlo?",
+      "options_10084": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ],
+      "id_10085": 5,
+      "text_10085": "¿Sientes una inquietud que te impide estar quieto/a o tranquilo/a?",
+      "options_10085": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ],
+      "id_10086": 6,
+      "text_10086": "¿Te sientes fácilmente irritable o molesto/a por cosas pequeñas?",
+      "options_10086": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ],
+      "id_10087": 7,
+      "text_10087": "¿Te sientes con miedo como si algo malo fuera a pasar?",
+      "options_10087": [
+        { "emoji": "🔴", "label": "Nunca",              "score": 0 },
+        { "emoji": "🟢", "label": "Varios días",        "score": 1 },
+        { "emoji": "🟡", "label": "La mitad de los días","score": 2 },
+        { "emoji": "⚪", "label": "Casi cada día",      "score": 3 }
+      ]
+    },
+    "puntaje": {
+        "interpretation": [
+        { "range": [0, 4],  "label": "No tiene sintomas" },
+        { "range": [5, 9],  "label": "Ansiedad leve" },
+        { "range": [10, 14],"label": "Ansiedad moderada" },
+        { "range": [15, 21],"label": "Ansiedad severa" }
+        ]
+    }
 }
