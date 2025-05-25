@@ -5,12 +5,14 @@
     {
       "texto": "Inhala suave por la nariz contando 4…\nRetén el aire 7…\nSuelta por la boca en 8 segundos, como si empañaras un cristal.\nRepetimos 4 veces. Yo llevo la cuenta contigo. Listo, vamos… 4-7-8…🌬️",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_21"
     },
     {
       "texto": "Mira este video mientras respiramos juntos. Las animaciones te van a marcar cuándo inhalar, sostener y exhalar. Respira al ritmo del círculo.🌬️\nUn círculo que se expande (inhala), se queda quieto (retén), se contrae (exhala). Texto breve en pantalla: \"Inhala\" / \"Retén\" / \"Exhala\".",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_21"
     }
   ],
 
@@ -20,12 +22,14 @@
     {
       "texto": "Inhala mientras el punto sube.\nMantén mientras avanza en la parte superior.\nExhala cuando baja.\nMantén sin aire en la base.",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_22"
     },
     {
       "texto": "Inhala… 1-2-3-4\nMantén… 1-2-3-4 (suena un cuenco suave)\nExhala… 1-2-3-4\nMantén… 1-2-3-4 (nuevo sonido de cuenco) 🚊",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_22"
     }
   ],
 
@@ -35,12 +39,14 @@
     {
       "texto": "1. Cruza los antebrazos sobre el pecho, manos en los hombros.\n2. Da golpecitos alternos (izq-der) a ritmo lento.\n3. Respira suave mientras cuentas hasta 20 golpes. 🦋",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_23"
     },
     {
       "texto": "Golpea suave al compás de la vibración — tu propio latido de calma. 🖼️",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_23"
     }
   ],
 
@@ -50,12 +56,14 @@
     {
       "texto": "Te dejo este sonido de lluvia para que la escuches mientras te tomas un momento para ti. 🌧️",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_24"
     },
     {
       "texto": "Visualiza en tu mente el viento suave de la playa y el sonido de las olas relajantes. 🌊",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_24"
     }
   ],
 
@@ -65,12 +73,14 @@
     {
       "texto": "Audio guiado 5 min + campanitas sutiles 🔔",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_25"
     },
     {
       "texto": "Video de bosque tranquilo con voz susurrada (texto en pantalla “Vuelve a la respiración”) 🌳",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_25"
     }
   ],
 
@@ -80,17 +90,20 @@
     {
       "texto": "Escribe un mensaje de ánimo como si fuera para ese amigo. 📝",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_26"
     },
     {
       "texto": "Graba un audio breve y luego escúchalo con auriculares. 🎙️",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_26"
     },
     {
       "texto": "Elige frases positivas pre-cargadas y mándatelas a ti mismo. 💌",
       "multimedia": "",
-      "siguiente": ""
+      "siguiente": "id_999",
+      "nextAfterEval": "id_26"
     }
   ]
 }

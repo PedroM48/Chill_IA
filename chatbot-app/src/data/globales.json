@@ -1,6 +1,6 @@
 {
     "id_1001": "lista_habitos",
-    "mensaje_1001": "Entiendo que tu ánimo y bienestar están mejorando 😊. Te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
+    "mensaje_1001": "Te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
     "opciones_1001": [
         {"texto": "Hidratación consciente: toma agua con calma y disfruta ese momento para ti. 🧊", 
             "siguiente": "id_1003"},
@@ -39,20 +39,13 @@
     ],
 
     "id_1004":"mensaje_bienvenida",
-    "mensaje_1004":"Hola [Nombre], ¿qué tal? 👋 Soy Chill IA, tu amigo virtual para esos momentos en los que la ansiedad te quiere ganar 😵‍💫. Estoy aquí para acompañarte, tranqui 😌, sin presiones ni nada por el estilo. Si quieres, podemos tomarnos un rato chill para hablar de tu situación 🧘‍♂️.",
+    "mensaje_1004":"Hola, ¿qué tal? 👋 Soy Chill IA, tu amigo virtual para esos momentos en los que la ansiedad te quiere ganar 😵‍💫. Estoy aquí para acompañarte, tranqui 😌, sin presiones ni nada por el estilo. Si quieres, podemos tomarnos un rato chill para hablar de tu situación 🧘‍♂️.",
     "opciones_1004": [
-      { "texto": "✅ Sí, claro 😌",   "siguiente": "id_1005" },
+      { "texto": "✅ Sí, claro 😌",   "siguiente": "id_10051" },
       { "texto": "😮‍💨 Solo quiero relajarme un toque",     "siguiente": "id_1006" },
       { "texto": "🕓 No ahora, tal vez después",     "siguiente": "id_1007" }
     ],
 
-    "id_1005":"si_claro",
-    "mensaje_1005":"Hola [Nombre], ¿qué tal? 👋 Soy Chill IA, tu amigo virtual para esos momentos en los que la ansiedad te quiere ganar 😵‍💫. Estoy aquí para acompañarte, tranqui 😌, sin presiones ni nada por el estilo. Si quieres, podemos tomarnos un rato chill para hablar de tu situación 🧘‍♂️.",
-    "opciones_1005": [
-      { "texto": "✅ Sí, claro 😌",   "siguiente": "id_1005" },
-      { "texto": "😮‍💨 Solo quiero relajarme un toque",     "siguiente": "id_1006" },
-      { "texto": "🕓 No ahora, tal vez después",     "siguiente": "id_1007" }
-    ],
     "id_10051":"si_claro_inicio1",
     "mensaje_10051":"Genial 😌 Antes de darte algunas preguntas que te puedan determinar el nivel de ansiedad que tienes, quiero conocerte un poquito mejor. Tranqui, no hay respuestas buenas ni malas. 💆‍♂️\n Primero que nada… dime algo: ¿cómo ha estado tu mente últimamente? (sé honesto/a) 🤗",
     "opciones_10051": [
@@ -72,10 +65,10 @@
     "id_10053":"si_claro_inicio3",
     "mensaje_10053":"Y si tuvieras que ponerle un nombre a cómo te sientes ahorita... ¿cuál sería? 😳",
     "opciones_10053": [
-      { "texto": "😵‍💫 Acelerado/a",   "siguiente": "id_10061" },
-      { "texto": "😔 Bajoneado/a",     "siguiente": "id_10062" },
-      { "texto": "😐 Apagado/a",     "siguiente": "id_10063" },
-      { "texto": "🤷 No sé cómo me siento",     "siguiente": "id_10063" }
+      { "texto": "😵‍💫 Acelerado/a",   "siguiente": "id_1008" },
+      { "texto": "😔 Bajoneado/a",     "siguiente": "id_1008" },
+      { "texto": "😐 Apagado/a",     "siguiente": "id_1008" },
+      { "texto": "🤷 No sé cómo me siento",     "siguiente": "id_1008" }
     ],
 
     "id_1006":"solo_relajarme_rato",
@@ -88,7 +81,7 @@
     "id_10061":"solo_relajarme_rato_respiracion",
     "mensaje_10061":"Respiremos juntos con calma. Solo sigue el ritmo del cuadrado que se mueve. Inhala… retén… exhala… retén… y repite. Solo eso 😌",
     "opciones_10061": [
-      { "texto": "🌬️ Respirar juntos un minuto",   
+      { "texto": "Estoy listo 😉",   
         "siguiente": "id_10064",
         "multimedia": "" }
     ],
@@ -132,7 +125,7 @@
     "id_1007":"no_ahora",
     "mensaje_1007":"Tranqui, no hay apuro. Tómate tu tiempo y cuando quieras, volvemos a hablar 😁",
     "opciones_1007": [
-      { "texto": "🫂",   "siguiente": "id_1003" }
+      { "texto": "Vale 🫂",   "siguiente": "id_1003" }
     ],
 
     "id_1008":"escala_GAD-7",
@@ -202,5 +195,12 @@
         { "range": [10, 14],"label": "Ansiedad moderada" },
         { "range": [15, 21],"label": "Ansiedad severa" }
         ]
-    }
+    },
+
+    "id_1009":"mensaje_gratitud",
+    "mensaje_1009":"Está bien, recuerda que siempre puedes escribirme cuando necesites, especialmente si vuelves a enfrentar algo parecido. Aquí estaré para acompañarte 🤗",
+    "opciones_1009": [
+      { "texto": "Volver al inicio",   "siguiente": "id_1004" },
+      { "texto": "Salir",   "siguiente": null }
+    ]
 }

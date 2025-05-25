@@ -1,224 +1,116 @@
+/* ==================== Card Container ==================== */
 .chat-container {
-  width: 450px; /* un poco más ancho */
-  margin: 50px auto;
-  font-family: 'Inter', Arial, sans-serif;
-  text-align: left; /* nada centrado */
-  background-color: rgba(245, 249, 252, 0.9);
+  max-width: 480px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(142, 191, 255, 0.3);
-  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  font-family: 'Inter', Arial, sans-serif;
   position: relative;
-  z-index: 1;
 }
 
-h1 {
-  color: #3a5068;
-  margin-bottom: 20px;
+/* Card Header */
+.chat-container h1 {
+  margin: 0 0 16px;
+  font-size: 1.75rem;
+  color: #24324a;
+  text-align: center;
   font-weight: 700;
-  font-size: 2rem;
-  text-align: center; /* título centrado */
 }
 
+/* ==================== Chat Box ==================== */
 .chat-box {
-  border: 1.5px solid #a8d0ba;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 16px;
   height: 400px;
   overflow-y: auto;
-  padding: 10px;
-  background: #e6f0ea;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* Mensajes estilo WhatsApp, pegados a sus lados y sin max-width centrado */
-.user, .bot {
+/* ==================== Layout de mensajes ==================== */
+.message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* Bot messages: avatar izquierda, bubble izquierda */
+.message-row.bot {
+  flex-direction: row;
+}
+
+/* User messages: avatar derecha, bubble derecha */
+.message-row.user {
+  flex-direction: row-reverse;
+}
+
+/* Avatar */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ==================== Bubble base ==================== */
+.bubble {
+  max-width: 70%;
   padding: 12px 16px;
   border-radius: 20px;
   line-height: 1.4;
   word-wrap: break-word;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-weight: 400;
-  font-style: normal;
   font-size: 1rem;
-  color: #000000dd;
-  max-width: 70%; /* ancho máximo de burbuja */
-  /* quitar align-self para centrar, usar flex container props */
+  color: #000;
 }
 
-/* Bot (izquierda) */
-.bot {
-  align-self: flex-start;
+.bubble.bot {
   background-color: #d3e6ff;
   color: #153e75;
+  align-self: flex-start;
   border-bottom-left-radius: 0;
-  margin-right: auto; /* pegado a la izquierda */
-  text-align: left;
 }
 
-/* Usuario (derecha) */
-.user {
-  align-self: flex-end;
-  background-color: #d2f4d2;
+.bubble.user {
+  background-color: #dcf8c6;
   color: #1b3810;
+  align-self: flex-end;
   border-bottom-right-radius: 0;
-  margin-left: auto; /* pegado a la derecha */
-  text-align: left; /* texto sin justificar */
 }
 
-.input-area {
-  display: flex;
-  gap: 8px;
-}
-
-.input-area input {
-  flex: 1;
-  padding: 10px;
-  border: 1.5px solid #a8d0ba;
-  border-radius: 6px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  background-color: #f0faf4;
-  transition: border-color 0.3s ease;
-  cursor: text;
-  font-family: 'Inter', Arial, sans-serif;
-}
-
-.input-area input:focus {
-  border-color: #76b39d;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.input-area button {
-  padding: 10px 20px;
-  background-color: #76a9fa;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(118, 169, 250, 0.3);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Inter', Arial, sans-serif;
-  font-weight: 600;
-}
-
-.input-area button:hover {
-  background-color: #3f7ae0;
-  box-shadow: 0 6px 12px rgba(63, 122, 224, 0.4);
-}
-.chat-container {
-  width: 450px; /* un poco más ancho */
-  margin: 50px auto;
-  font-family: 'Inter', Arial, sans-serif;
-  text-align: left; /* nada centrado */
-  background-color: rgba(245, 249, 252, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(142, 191, 255, 0.3);
-  padding: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-h1 {
-  color: #3a5068;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 2rem;
-  text-align: center; /* título centrado */
-}
-
-.chat-box {
-  border: 1.5px solid #a8d0ba;
-  height: 400px;
-  overflow-y: auto;
-  padding: 10px;
-  background: #e6f0ea;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+/* ==================== Opciones dentro del bubble ==================== */
+.options-area {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-/* Mensajes estilo WhatsApp, pegados a sus lados y sin max-width centrado */
-.user, .bot {
-  padding: 12px 16px;
-  border-radius: 20px;
-  line-height: 1.4;
-  word-wrap: break-word;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  color: #000000dd;
-  max-width: 70%; /* ancho máximo de burbuja */
-  /* quitar align-self para centrar, usar flex container props */
-}
-
-/* Bot (izquierda) */
-.bot {
-  align-self: flex-start;
-  background-color: #d3e6ff;
-  color: #153e75;
-  border-bottom-left-radius: 0;
-  margin-right: auto; /* pegado a la izquierda */
-  text-align: left;
-}
-
-/* Usuario (derecha) */
-.user {
-  align-self: flex-end;
-  background-color: #d2f4d2;
-  color: #1b3810;
-  border-bottom-right-radius: 0;
-  margin-left: auto; /* pegado a la derecha */
-  text-align: left; /* texto sin justificar */
-}
-
-.input-area {
-  display: flex;
   gap: 8px;
+  margin-top: 12px;
 }
 
-.input-area input {
-  flex: 1;
-  padding: 10px;
-  border: 1.5px solid #a8d0ba;
-  border-radius: 6px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  background-color: #f0faf4;
-  transition: border-color 0.3s ease;
-  cursor: text;
-  font-family: 'Inter', Arial, sans-serif;
-}
-
-.input-area input:focus {
-  border-color: #76b39d;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.input-area button {
-  padding: 10px 20px;
-  background-color: #76a9fa;
-  color: white;
+.option-btn {
+  display: inline-block;
+  max-width: 60%;
+  padding: 10px 14px;
+  background-color: #dcf8c6;
+  color: #1b3810;
   border: none;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  text-align: left;
   cursor: pointer;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(118, 169, 250, 0.3);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Inter', Arial, sans-serif;
-  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.input-area button:hover {
-  background-color: #3f7ae0;
-  box-shadow: 0 6px 12px rgba(63, 122, 224, 0.4);
+.option-btn:hover {
+  background-color: #cceac4;
+}
+
+.option-btn:active {
+  transform: scale(0.97);
 }
