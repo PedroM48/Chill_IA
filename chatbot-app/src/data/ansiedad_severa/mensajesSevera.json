@@ -1,0 +1,72 @@
+{
+  "id_200": "mensaje_inicio_SEVERA",
+  "mensaje_200": "Me parece que tus problemas están siendo realmente intensos; no estás solo/a y vamos a afrontarlo juntos paso a paso. Respira profundo: vamos a usar herramientas potentes, con calma y apoyo constante. 🌟",
+  "opciones_200": [
+    {
+      "texto": "Si, claro 🤗",
+      "multimedia": "",
+      "siguiente": "id_210"
+    }
+  ],
+
+  "id_201": "eva_alto_LEVE",
+  "mensaje_201": "Me alegro que ya te sientas mejor. 🫂",
+  "opciones_201": [
+    {
+      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
+      "multimedia": "",
+      "siguiente": "id_1001"
+    }
+  ],
+  "id_202": "eva_medio_LEVE",
+  "mensaje_202": "Parece que todo está tranquilo por ahora 😊. ¿Quieres que te pase algunos tips fáciles para mantener ese buen ánimo, o prefieres descansar y seguir después?",
+  "opciones_202": [
+    {
+      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
+      "multimedia": "",
+      "siguiente": "id_213"
+    }
+  ],
+  "id_203": "eva_bajo_LEVE",
+  "mensaje_203": "Parece que últimamente no te has sentido del todo bien. Aquí te dejo un par de consejos sencillos que pueden ayudarte a mejorar tu ánimo en el día a día 🌟.",
+  "opciones_203": [
+    {
+      "texto": "Escribir cómo te sientes de vez en cuando 😌",
+      "multimedia": "",
+      "siguiente": "id_999"
+    },
+    {
+      "texto": "Tomar pequeños momentos durante el día para respirar y relajarte 😮‍💨",
+      "multimedia": "",
+      "siguiente": "id_999"
+    }
+  ],
+
+
+  "id_204": "pregunta1_si_desea_seguir_LEVE",
+  "mensaje_204": "Espero que eso te haya ayudado un poco 😊. ¿Quieres que siga compartiéndote más tips para mantener ese buen ánimo, o prefieres tomar un descanso y continuar después?",
+  "opciones_204": [
+    {
+      "texto": "✅ Sí, quiero más tips",
+      "multimedia": "",
+      "siguiente": "id_203"
+    },
+    {
+      "texto": "💤 No, prefiero continuar después",
+      "multimedia": "",
+      "siguiente": "id_1009"
+    }
+  ],
+  "id_205": "pregunta2_si_desea_seguir_LEVE",
+  "mensaje_205": "¿Aún deseas seguir con la conversación? ¿Sientes que ningua solución o actividad te haya ayudado a mejorar? 😔",
+  "opciones_205": [
+    {
+      "texto": "✅ Sí, aún quiero seguir",
+      "siguiente": "soluciones ansiedad moderada"
+    },
+    {
+      "texto": "💤 No, prefiero continuar después",
+      "siguiente": "id_1009"
+    }
+  ]
+}

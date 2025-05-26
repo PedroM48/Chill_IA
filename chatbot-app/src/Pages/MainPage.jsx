@@ -1,35 +1,57 @@
-import React, { useState } from "react";
-import globales from "../data/globales.json";
-import botAvatar from "../multimedia/bot.png"; 
-import userAvatar from "../multimedia/user.png";
-import mensajesLeve from "../data/ansiedad_leve/mensajesLeve.json";
-import solucionesLeve from "../data/ansiedad_leve/solucionesLeve.json";
-import "./MainPage.css";
+import React, { useState, useEffect } from "react";
+import globales from "../data/globales.json";          
+import botAvatar from "../multimedia/bot.png";       
+import userAvatar from "../multimedia/user.png";      
+import mensajesLeve from "../data/ansiedad_leve/mensajesLeve.json";   
+import solucionesLeve from "../data/ansiedad_leve/solucionesLeve.json"; 
+import mensajesModerada from "../data/ansiedad_leve/mensajesLeve.json";   
+import solucionesModerada from "../data/ansiedad_leve/solucionesLeve.json"; 
+import mensajesSevera from "../data/ansiedad_leve/mensajesLeve.json";   
+import solucionesSevera from "../data/ansiedad_leve/solucionesLeve.json"; 
+import "./MainPage.css";                                    
 
-// Combina ambos flujos de mensajes
-const flows = { 
-    ...globales, 
-    ...mensajesLeve,
-    ...solucionesLeve,
-  };
+// Unificamos todos los mensajes y opciones en un solo objeto de flujo
+const flows = {
+  ...globales,
+  ...mensajesLeve,
+  ...solucionesLeve,
+  ...mensajesModerada,
+  ...solucionesModerada,
+  ...mensajesSevera,
+  ...solucionesSevera,
+};
 
 export default function MainPage() {
   const INITIAL_ID = "id_1004";
-
-  // Estados generales
   const [messages, setMessages] = useState([
     { from: "bot", text: flows[`mensaje_${INITIAL_ID.split("_")[1]}`] }
   ]);
   const [currentId, setCurrentId] = useState(INITIAL_ID);
   const [typing, setTyping] = useState(false);
-
-  // Estados para flujo GAD-7
+  const [nextAfterEval, setNextAfterEval] = useState(null);
+  const [leveScores, setLeveScores] = useState([]);
   const [isGadFlow, setIsGadFlow] = useState(false);
   const [gadQuestions, setGadQuestions] = useState([]);
   const [gadIndex, setGadIndex] = useState(0);
   const [scores, setScores] = useState([]);
 
-  // Inicia flujo GAD-7 extrayendo preguntas del JSON
+  useEffect(() => {
+    const step = currentId.split("_")[1];
+    const opciones = flows[`opciones_${step}`] || [];
+    if (opciones.length && opciones[0].nextAfterEval) {
+      const chosen = opciones[Math.floor(Math.random() * opciones.length)];
+      setTyping(true);
+      setNextAfterEval(chosen.nextAfterEval);
+      setTimeout(() => {
+        setMessages(prev => [...prev, { from: "bot", text: chosen.texto }]);
+        const evalId = chosen.siguiente;
+        setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${evalId.split("_")[1]}`] }]);
+        setCurrentId(evalId);
+        setTyping(false);
+      }, 2000);
+    }
+  }, [currentId]);
+
   const startGadFlow = () => {
     const raw = flows.opciones_1008;
     const questions = [];
@@ -43,17 +65,13 @@ export default function MainPage() {
     setGadQuestions(questions);
     setGadIndex(0);
     setIsGadFlow(true);
-    // Muestra la primera pregunta tras intro
     setMessages(prev => [...prev, { from: "bot", text: questions[0].text }]);
   };
 
-  // Maneja selección de opción (flujo normal o GAD-7)
   const handleOption = (opt) => {
-    // Añade respuesta del usuario
     const userText = opt.texto || `${opt.emoji} ${opt.label}`;
     setMessages(prev => [...prev, { from: "user", text: userText }]);
-
-    // Entrada a GAD-7
+    if (opt.nextAfterEval) setNextAfterEval(opt.nextAfterEval);
     if (opt.siguiente === "id_1008") {
       setTyping(true);
       setTimeout(() => {
@@ -63,37 +81,48 @@ export default function MainPage() {
       }, 3000);
       return;
     }
-
-    // Simula typing para normal o GAD-7
     setTyping(true);
     setTimeout(() => {
       if (isGadFlow) {
-        // Registra score actual
-        setScores(prev => [...prev, opt.score]);
+        const updated = [...scores, opt.score];
+        setScores(updated);
         const nextIdx = gadIndex + 1;
         if (nextIdx < gadQuestions.length) {
-          const nextQ = gadQuestions[nextIdx];
-          setMessages(prev => [...prev, { from: "bot", text: nextQ.text }]);
+          setMessages(prev => [...prev, { from: "bot", text: gadQuestions[nextIdx].text }]);
           setGadIndex(nextIdx);
         } else {
-          // Fin GAD-7: mensaje final y next flow
-          const finalMsg =
-            "Listo, ya tengo una mejor idea de cómo han estado tus días últimamente. Y tranqui, nada de lo que sientes está mal 😉.";
-          setMessages(prev => [...prev, { from: "bot", text: finalMsg }]);
-          // Avanza al nuevo flujo (id_200)
-          const nextId = "id_200";
-          const nextMsgKey = `mensaje_${nextId.split("_")[1]}`;
-          setMessages(prev => [...prev, { from: "bot", text: flows[nextMsgKey] }]);
+          const total = updated.reduce((sum, s) => sum + s, 0);
+          let nextId;
+          if (total <= 4) nextId = "id_500";
+          else if (total <= 9) nextId = "id_200";
+          else if (total <= 14) nextId = "id_300";
+          else nextId = "id_400";
+          setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${nextId.split("_")[1]}`] }]);
           setCurrentId(nextId);
           setIsGadFlow(false);
+          setScores([]);
         }
       } else {
-        // Flujo normal
         if (opt.siguiente) {
-          const nextId = opt.siguiente;
-          const msgKey = `mensaje_${nextId.split("_")[1]}`;
-          setMessages(prev => [...prev, { from: "bot", text: flows[msgKey] }]);
-          setCurrentId(nextId);
+          let rawNext = opt.siguiente === "{{nextAfterEval}}" && nextAfterEval ? nextAfterEval : opt.siguiente;
+          if (opt.score !== undefined) {
+            const newScores = [...leveScores, opt.score];
+            setLeveScores(newScores);
+            if (newScores.length === 3) {
+              const avg = newScores.reduce((a, b) => a + b, 0) / 3;
+              let evalId;
+              if (avg > 3) evalId = "id_201";
+              else if (avg > 2) evalId = "id_202";
+              else evalId = "id_203";
+              setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${evalId.split("_")[1]}`] }]);
+              setCurrentId(evalId);
+              setLeveScores([]);
+              setTyping(false);
+              return;
+            }
+          }
+          setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${rawNext.split("_")[1]}`] }]);
+          setCurrentId(rawNext);
         } else {
           setMessages(prev => [...prev, { from: "bot", text: "¡Hasta luego! Hasta la próxima." }]);
         }
@@ -102,28 +131,22 @@ export default function MainPage() {
     }, 3000);
   };
 
-  // Renderiza opciones según estado
   const renderOptions = () => {
     if (isGadFlow) {
-      const q = gadQuestions[gadIndex];
       return (
         <div className="options-area">
-          {q.options.map((o, i) => (
-            <button key={i} onClick={() => handleOption(o)} className="option-btn">
-              {o.emoji} {o.label}
-            </button>
+          {gadQuestions[gadIndex].options.map((o, i) => (
+            <button key={i} onClick={() => handleOption(o)} className="option-btn">{o.emoji} {o.label}</button>
           ))}
         </div>
       );
     }
-    const idNum = currentId.split("_")[1];
-    const opc = flows[`opciones_${idNum}`] || [];
+    const opciones = flows[`opciones_${currentId.split("_")[1]}`] || [];
+    if (opciones.length && opciones[0].nextAfterEval) return null;
     return (
       <div className="options-area">
-        {opc.map((opt, i) => (
-          <button key={i} onClick={() => handleOption(opt)} className="option-btn">
-            {opt.texto}
-          </button>
+        {opciones.map((opt, i) => (
+          <button key={i} onClick={() => handleOption(opt)} className="option-btn">{opt.texto}</button>
         ))}
       </div>
     );
@@ -134,26 +157,9 @@ export default function MainPage() {
       <h1>CHILL IA 🤙</h1>
       <div className="chat-box">
         {messages.map((msg, i) => (
-          <div key={i} className={`message-row ${msg.from}`}>
-            <img
-              src={msg.from === 'bot' ? botAvatar : userAvatar}
-              className="avatar"
-              alt={msg.from === 'bot' ? 'Bot' : 'Usuario'}
-            />
-            <div className={`bubble ${msg.from}`}>
-              <span>{msg.text}</span>
-              {i === messages.length - 1 && !typing && renderOptions()}
-            </div>
-          </div>
+          <div key={i} className={`message-row ${msg.from}`}><img src={msg.from === 'bot' ? botAvatar : userAvatar} className="avatar" alt="" /><div className={`bubble ${msg.from}`}><span>{msg.text}</span>{i === messages.length - 1 && !typing && renderOptions()}</div></div>
         ))}
-        {typing && (
-          <div className="message-row bot">
-            <img src={botAvatar} className="avatar" alt="Bot" />
-            <div className="bubble bot typing">
-              <span>Chill IA está escribiendo...</span>
-            </div>
-          </div>
-        )}
+        {typing && (<div className="message-row bot"><img src={botAvatar} className="avatar" alt="" /><div className="bubble bot typing"><span>Chill IA está escribiendo...</span></div></div>)}
       </div>
     </div>
   );
