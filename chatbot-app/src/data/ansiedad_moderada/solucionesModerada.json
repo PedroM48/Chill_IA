@@ -1,58 +1,59 @@
 {
-  "id_20": "respiracion_4_7_8",
-  "mensaje_20": "¿Qué te parece si empezamos con la respiración 4-7-8? Busca un lugar cómodo y comencemos.",
-  "opciones_20": [
+  "id_310": "respiracion_4_7_8",
+  "mensaje_310": "¿Qué te parece si empezamos con la respiración 4-7-8? Busca un lugar cómodo y comencemos.",
+  "opciones_310": [
     {
       "texto": "Inhala suave por la nariz contando 4…\nRetén el aire 7…\nSuelta por la boca en 8 segundos, como si empañaras un cristal.\nRepetimos 4 veces. Yo llevo la cuenta contigo. Listo, vamos… 4-7-8…🌬️",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_21"
+      "siguiente": "id_1002",
+      "nextAfterEval": "id_311"
     },
     {
       "texto": "Mira este video mientras respiramos juntos. Las animaciones te van a marcar cuándo inhalar, sostener y exhalar. Respira al ritmo del círculo.🌬️\nUn círculo que se expande (inhala), se queda quieto (retén), se contrae (exhala). Texto breve en pantalla: \"Inhala\" / \"Retén\" / \"Exhala\".",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_21"
+      "siguiente": "id_1002",
+      "nextAfterEval": "id_311"
     }
   ],
 
-  "id_21": "respiracion_cuadrado",
-  "mensaje_21": "¿Te parece si ahora probamos la respiración en “cuadrado”? Siéntate con la espalda recta; te guiaré paso a paso para equilibrar cuerpo y mente.",
-  "opciones_21": [
+  "id_311": "respiracion_cuadrado",
+  "mensaje_311": "¿Te parece si ahora probamos la respiración en “cuadrado”? Siéntate con la espalda recta; te guiaré paso a paso para equilibrar cuerpo y mente.",
+  "opciones_311": [
     {
       "texto": "Inhala mientras el punto sube.\nMantén mientras avanza en la parte superior.\nExhala cuando baja.\nMantén sin aire en la base.",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_22"
+      "siguiente": "id_1002",
+      "nextAfterEval": "id_312"
     },
     {
       "texto": "Inhala… 1-2-3-4\nMantén… 1-2-3-4 (suena un cuenco suave)\nExhala… 1-2-3-4\nMantén… 1-2-3-4 (nuevo sonido de cuenco) 🚊",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_22"
+      "siguiente": "id_1002",
+      "nextAfterEval": "id_312"
     }
   ],
 
-  "id_22": "abrazo_mariposa",
-  "mensaje_22": "Intentemos algo más físico: el abrazo mariposa🦋. Es un gesto sencillo que envía señales de calma a tu sistema nervioso. Colócate cómodo/a y sigue mis indicaciones.",
-  "opciones_22": [
+  "id_312": "abrazo_mariposa",
+  "mensaje_312": "Intentemos algo más físico: el abrazo mariposa🦋. Es un gesto sencillo que envía señales de calma a tu sistema nervioso. Colócate cómodo/a y sigue mis indicaciones.",
+  "opciones_312": [
     {
       "texto": "1. Cruza los antebrazos sobre el pecho, manos en los hombros.\n2. Da golpecitos alternos (izq-der) a ritmo lento.\n3. Respira suave mientras cuentas hasta 20 golpes. 🦋",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_23"
+      "siguiente": "id_1002",
+      "nextAfterEval": "?"
     },
     {
       "texto": "Golpea suave al compás de la vibración — tu propio latido de calma. 🖼️",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_23"
+      "siguiente": "id_1002",
+      "nextAfterEval": "?"
     }
   ],
 
-  "id_23": "escuchar_sonidos_naturales",
-  "mensaje_23": "Genial. Escuchemos la naturaleza un momento; elige el ambiente que prefieras.",
-  "opciones_23": [
+
+  "id_313": "escuchar_sonidos_naturales",
+  "mensaje_313": "Genial. Escuchemos la naturaleza un momento; elige el ambiente que prefieras.",
+  "opciones_313": [
     {
       "texto": "Te dejo este sonido de lluvia para que la escuches mientras te tomas un momento para ti. 🌧️",
       "multimedia": "",
@@ -67,9 +68,9 @@
     }
   ],
 
-  "id_24": "mindfulness",
-  "mensaje_24": "Comencemos con una sesión de mindfulness, concentrémonos en el presente. Cierra los ojos o mira un punto fijo; yo te acompañaré con voz suave.",
-  "opciones_24": [
+  "id_314": "mindfulness",
+  "mensaje_314": "Comencemos con una sesión de mindfulness, concentrémonos en el presente. Cierra los ojos o mira un punto fijo; yo te acompañaré con voz suave.",
+  "opciones_314": [
     {
       "texto": "Audio guiado 5 min + campanitas sutiles 🔔",
       "multimedia": "",
@@ -84,9 +85,9 @@
     }
   ],
 
-  "id_25": "reencuadre_mental",
-  "mensaje_25": "La ansiedad a veces nos habla con voz dura. Te propongo un pequeño cambio de perspectiva: piensa en tu preocupación y háblate como a tu mejor amigo. 💬",
-  "opciones_25": [
+  "id_315": "reencuadre_mental",
+  "mensaje_315": "La ansiedad a veces nos habla con voz dura. Te propongo un pequeño cambio de perspectiva: piensa en tu preocupación y háblate como a tu mejor amigo. 💬",
+  "opciones_315": [
     {
       "texto": "Escribe un mensaje de ánimo como si fuera para ese amigo. 📝",
       "multimedia": "",

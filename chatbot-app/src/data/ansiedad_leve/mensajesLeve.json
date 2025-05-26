@@ -4,41 +4,38 @@
   "opciones_200": [
     {
       "texto": "Si, claro 🤗",
-      "multimedia": "",
       "siguiente": "id_210"
     }
   ],
 
   "id_201": "eva_alto_LEVE",
-  "mensaje_201": "Me alegro que ya te sientas mejor. 🫂",
+  "mensaje_201": "Me alegro que ya te estás más chill",
   "opciones_201": [
     {
-      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
-      "multimedia": "",
+      "texto": "🫂",
+      "multimedia": "", 
       "siguiente": "id_1001"
     }
   ],
   "id_202": "eva_medio_LEVE",
-  "mensaje_202": "Parece que todo está tranquilo por ahora 😊. ¿Quieres que te pase algunos tips fáciles para mantener ese buen ánimo, o prefieres descansar y seguir después?",
+  "mensaje_202": "Mmmm... ya, quieres hacer algo juntos, ¿Te parece?",
   "opciones_202": [
     {
-      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
+      "texto": "Vale 😮‍💨",
       "multimedia": "",
       "siguiente": "id_213"
     }
   ],
   "id_203": "eva_bajo_LEVE",
-  "mensaje_203": "Parece que últimamente no te has sentido del todo bien. Aquí te dejo un par de consejos sencillos que pueden ayudarte a mejorar tu ánimo en el día a día 🌟.",
+  "mensaje_203": "Te dejo un par de actividades sencillas que pueden ayudarte a mejorar tu ánimo en el día a día 🌟.",
   "opciones_203": [
     {
       "texto": "Escribir cómo te sientes de vez en cuando 😌",
-      "multimedia": "",
-      "siguiente": "id_999"
+      "siguiente": "id_214"
     },
     {
       "texto": "Tomar pequeños momentos durante el día para respirar y relajarte 😮‍💨",
-      "multimedia": "",
-      "siguiente": "id_999"
+      "siguiente": "id_215"
     }
   ],
 
@@ -52,7 +49,7 @@
       "siguiente": "id_203"
     },
     {
-      "texto": "💤 No, prefiero continuar después",
+      "texto": "❎ No, estoy bien",
       "multimedia": "",
       "siguiente": "id_1009"
     }
@@ -62,7 +59,7 @@
   "opciones_205": [
     {
       "texto": "✅ Sí, aún quiero seguir",
-      "siguiente": "soluciones ansiedad moderada"
+      "siguiente": "id_300"
     },
     {
       "texto": "💤 No, prefiero continuar después",

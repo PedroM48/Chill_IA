@@ -41,12 +41,12 @@
     {
       "texto": "Caminar sin celular por 5 a 10 minutos.",
       "siguiente": "id_1002",
-      "nextAfterEval": "id_213"
+      "nextAfterEval": "?"
     },
     {
       "texto": "Realizar estiramientos.",
       "siguiente": "id_1002",
-      "nextAfterEval": "id_213"
+      "nextAfterEval": "?"
     }
   ],
 

@@ -1,5 +1,5 @@
 {
-  "id_200": "mensaje_inicio_SEVERA",
+  "id_400": "mensaje_inicio_SEVERA",
   "mensaje_200": "Me parece que tus problemas están siendo realmente intensos; no estás solo/a y vamos a afrontarlo juntos paso a paso. Respira profundo: vamos a usar herramientas potentes, con calma y apoyo constante. 🌟",
   "opciones_200": [
     {
@@ -9,7 +9,7 @@
     }
   ],
 
-  "id_201": "eva_alto_LEVE",
+  "id_201": "eva_alto_SEVERA",
   "mensaje_201": "Me alegro que ya te sientas mejor. 🫂",
   "opciones_201": [
     {
