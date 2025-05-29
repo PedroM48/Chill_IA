@@ -1,9 +1,9 @@
 {
   "id_300": "mensaje_inicio_MODERADA",
-  "mensaje_200": "Hey, noto que la ansiedad anda un poco más presente de lo habitual. No pasa nada, estamos juntos en esto. ¿Te parece si dedicamos unos minutos a bajarle el volumen? Vamos con calma, tú marcas el ritmo. 🫂",
+  "mensaje_200": "Hey, noto que la ansiedad anda un poco más presente de lo habitual. No pasa nada, vamos con calma, tú marcas el ritmo. 🫂",
   "opciones_200": [
     {
-      "texto": "Si, claro 🤗",
+      "texto": "Vale 😮‍💨",
       "siguiente": "id_310"
     }
   ],
@@ -13,7 +13,6 @@
   "opciones_301": [
     {
       "texto": "🫂",
-      "multimedia": "",
       "siguiente": "id_1001"
     }
   ],
@@ -21,23 +20,24 @@
   "mensaje_302": "Mmmm... ya, quieres hacer algo juntos, ¿Te parece?",
   "opciones_302": [
     {
-      "texto": "Vale 😮‍💨",
-      "multimedia": "",
-      "siguiente": "id_213"
+      "texto": "Está bien 🤧",
+      "siguiente": "id_313"
     }
   ],
   "id_303": "eva_bajo_MODERADA",
-  "mensaje_303": "Te dejo un par de actividades sencillas que pueden ayudarte a mejorar tu ánimo en el día a día 🌟.",
+  "mensaje_303": "Te dejo unas actividades sencillas que pueden ayudarte para que te sientas mejor 🌟",
   "opciones_303": [
     {
-      "texto": "Escribir cómo te sientes de vez en cuando 😌",
-      "multimedia": "",
-      "siguiente": "id_999"
+      "texto": "El reencuadre mental cambiar tus pensamientos acerca de tus preocupaciones 😓",
+      "siguiente": "id_315"
     },
     {
-      "texto": "Tomar pequeños momentos durante el día para respirar y relajarte 😮‍💨",
-      "multimedia": "",
-      "siguiente": "id_999"
+      "texto": "La Técnica del Objeto Ancla que consiste en la atención 😉",
+      "siguiente": "id_316"
+    },
+    {
+      "texto": "Box breathing, forma simple y efectiva para calmar la mente y el cuerpo 😮‍💨",
+      "siguiente": "id_317"
     }
   ],
 
@@ -47,21 +47,32 @@
   "opciones_304": [
     {
       "texto": "✅ Sí, quiero más tips",
-      "multimedia": "",
-      "siguiente": "id_203"
+      "siguiente": "id_314"
     },
     {
-      "texto": "💤 No, prefiero continuar después",
-      "multimedia": "",
+      "texto": "💤 No, prefiero continuar después", 
       "siguiente": "id_1009"
     }
   ],
   "id_305": "pregunta2_si_desea_seguir_MODERADA",
-  "mensaje_305": "¿Aún deseas seguir con la conversación? ¿Sientes que ningua solución o actividad te haya ayudado a mejorar? 😔",
+  "mensaje_305": "¿Deseas seguir con la conversación? Dímelo con confianza, no te preocupes ☺️",
   "opciones_305": [
     {
+      "texto": "Si, claro, me gustaría 😖",
+      "siguiente": "id_303"
+    },
+    {
+      "texto": "Estoy bien, gracias 💤",
+      "siguiente": "id_1009"
+    }
+  ],
+
+  "id_306": "pregunta3_si_desea_seguir_MODERADA",
+  "mensaje_306": "¿Aún deseas seguir con la conversación? ¿Sientes que ningua solución o actividad te haya ayudado a mejorar? 😔",
+  "opciones_306": [
+    {
       "texto": "✅ Sí, aún quiero seguir",
-      "siguiente": "soluciones ansiedad moderada"
+      "siguiente": "id_400"
     },
     {
       "texto": "💤 No, prefiero continuar después",

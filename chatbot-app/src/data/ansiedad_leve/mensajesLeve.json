@@ -13,7 +13,6 @@
   "opciones_201": [
     {
       "texto": "🫂",
-      "multimedia": "", 
       "siguiente": "id_1001"
     }
   ],
@@ -22,7 +21,6 @@
   "opciones_202": [
     {
       "texto": "Vale 😮‍💨",
-      "multimedia": "",
       "siguiente": "id_213"
     }
   ],
@@ -45,12 +43,10 @@
   "opciones_204": [
     {
       "texto": "✅ Sí, quiero más tips",
-      "multimedia": "",
       "siguiente": "id_203"
     },
     {
       "texto": "❎ No, estoy bien",
-      "multimedia": "",
       "siguiente": "id_1009"
     }
   ],
@@ -58,7 +54,7 @@
   "mensaje_205": "¿Aún deseas seguir con la conversación? ¿Sientes que ningua solución o actividad te haya ayudado a mejorar? 😔",
   "opciones_205": [
     {
-      "texto": "✅ Sí, aún quiero seguir",
+      "texto": "✅ Sí, aún quiero seguir viendo soluciones",
       "siguiente": "id_300"
     },
     {

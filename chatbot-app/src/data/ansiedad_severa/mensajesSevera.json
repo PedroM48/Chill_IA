@@ -1,68 +1,94 @@
 {
   "id_400": "mensaje_inicio_SEVERA",
-  "mensaje_200": "Me parece que tus problemas están siendo realmente intensos; no estás solo/a y vamos a afrontarlo juntos paso a paso. Respira profundo: vamos a usar herramientas potentes, con calma y apoyo constante. 🌟",
-  "opciones_200": [
+  "mensaje_400": "Me parece que tus problemas están siendo realmente intensos; no estás solo/a y vamos a afrontarlo juntos paso a paso. Ya, vamos a usar herramientas potentes, con calma y apoyo constante. 🌟",
+  "opciones_400": [
     {
-      "texto": "Si, claro 🤗",
-      "multimedia": "",
-      "siguiente": "id_210"
+      "texto": "Vamos 😕",
+      "siguiente": "id_410"
+
     }
   ],
 
-  "id_201": "eva_alto_SEVERA",
-  "mensaje_201": "Me alegro que ya te sientas mejor. 🫂",
-  "opciones_201": [
+  "id_401": "eva_alto_SEVERA",
+  "mensaje_401": "Me alegro que ya te estás más chill",
+  "opciones_401": [
     {
-      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
-      "multimedia": "",
+      "texto": "🫂",
       "siguiente": "id_1001"
     }
   ],
-  "id_202": "eva_medio_LEVE",
-  "mensaje_202": "Parece que todo está tranquilo por ahora 😊. ¿Quieres que te pase algunos tips fáciles para mantener ese buen ánimo, o prefieres descansar y seguir después?",
-  "opciones_202": [
+  "id_402": "eva_medio_SEVERA",
+  "mensaje_402": "Parece que todo está mejorando, ¿no? ¿deseas saber algunos tips fáciles para mantener ese buen ánimo?",
+  "opciones_402": [
     {
-      "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
-      "multimedia": "",
-      "siguiente": "id_213"
+      "texto": "Si, por favor 🙁",
+      "siguiente": "id_413"
     }
   ],
-  "id_203": "eva_bajo_LEVE",
-  "mensaje_203": "Parece que últimamente no te has sentido del todo bien. Aquí te dejo un par de consejos sencillos que pueden ayudarte a mejorar tu ánimo en el día a día 🌟.",
-  "opciones_203": [
+  "id_403": "eva_bajo_SEVERA",
+  "mensaje_403": "Tranqui, entiendo que estas de ánimos bajos, aquí te dejo algunas actividades:",
+  "opciones_403": [
     {
-      "texto": "Escribir cómo te sientes de vez en cuando 😌",
-      "multimedia": "",
-      "siguiente": "id_999"
+      "texto": "La técnica Stop Detallada, buena para despejar tu mente 🛑",
+      "siguiente": "id_415"
     },
     {
-      "texto": "Tomar pequeños momentos durante el día para respirar y relajarte 😮‍💨",
-      "multimedia": "",
-      "siguiente": "id_999"
+      "texto": "Evitar pensamientos catastróficos para anotar los pensamientos negativos 😖",
+      "siguiente": "id_416"
+    },
+    {
+      "texto": "Liberar las microtensiones para despejar toda la energía acumulada que tienes 🪫",
+      "siguiente": "id_417"
+    },
+    {
+      "texto": "Sentarse contra la pared da un sentimiento de liberar carga emocional 🧱",
+      "siguiente": "id_418"
+    },
+    {
+      "texto": "Escuchar afirmaciones suaves y repetitivas, sentirse mejor con uno mismo 🫨",
+      "siguiente": "id_419"
+    },
+    {
+      "texto": "Escribir lo que se te venga a la mente sin filtros ni edición ✍️",
+      "siguiente": "id_420"
+    },
+    {
+      "texto": "Establecer pequeños objetivos durante las próximas horas ⌚🎯",
+      "siguiente": "id_421"
     }
   ],
 
 
-  "id_204": "pregunta1_si_desea_seguir_LEVE",
-  "mensaje_204": "Espero que eso te haya ayudado un poco 😊. ¿Quieres que siga compartiéndote más tips para mantener ese buen ánimo, o prefieres tomar un descanso y continuar después?",
-  "opciones_204": [
+  "id_404": "pregunta1_si_desea_seguir_SEVERA",
+  "mensaje_404": "Espero que eso te haya ayudado un poco 😊. ¿Quieres que siga compartiéndote más tips para mantener ese buen ánimo, o prefieres tomar un descanso y continuar después?",
+  "opciones_404": [
     {
       "texto": "✅ Sí, quiero más tips",
-      "multimedia": "",
-      "siguiente": "id_203"
+      "siguiente": "id_414"
     },
     {
       "texto": "💤 No, prefiero continuar después",
-      "multimedia": "",
       "siguiente": "id_1009"
     }
   ],
-  "id_205": "pregunta2_si_desea_seguir_LEVE",
-  "mensaje_205": "¿Aún deseas seguir con la conversación? ¿Sientes que ningua solución o actividad te haya ayudado a mejorar? 😔",
-  "opciones_205": [
+  "id_405": "pregunta2_si_desea_seguir_SEVERA",
+  "mensaje_405": "¿Deseas seguir con la conversación? Dímelo con confianza, no te preocupes ☺️",
+  "opciones_405": [
+    {
+      "texto": "Si, claro, me gustaría 😖",
+      "siguiente": "id_403"
+    },
+    {
+      "texto": "Estoy bien, gracias 💤",
+      "siguiente": "id_1009"
+    }
+  ],
+  "id_406": "pregunta3_si_desea_seguir_SEVERA",
+  "mensaje_406": "¿Aún deseas seguir con la conversación? ¿Sientes que ningua solución o actividad te haya ayudado a mejorar? 😔",
+  "opciones_406": [
     {
       "texto": "✅ Sí, aún quiero seguir",
-      "siguiente": "soluciones ansiedad moderada"
+      "siguiente": "id_500"
     },
     {
       "texto": "💤 No, prefiero continuar después",

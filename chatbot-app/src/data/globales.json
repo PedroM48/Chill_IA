@@ -1,6 +1,6 @@
 {
     "id_1001": "lista_habitos",
-    "mensaje_1001": "Te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
+    "mensaje_1001": "Ah, igual te dejo algunas recomendaciones simples para sentirte aún mejor en tu día a día:",
     "opciones_1001": [
         {"texto": "Hidratación consciente: toma agua con calma y disfruta ese momento para ti. 🧊", 
             "siguiente": "id_1003"},
@@ -19,6 +19,10 @@
         {"texto": "Limita el consumo de alcohol, ya que puede aumentar la ansiedad y afectar tu sueño. 🍷🚫", 
             "siguiente": "id_1003"},
         {"texto": "Realiza comidas conscientes: come despacio y disfruta cada bocado para reducir el estrés. 🥢", 
+            "siguiente": "id_1003"},
+        {"texto": "Evita hacer muchas tareas a la vez, enfócate en terminar una para empezar otra 📝", 
+            "siguiente": "id_1003"},
+        {"texto": "Si te sientes muy cargado, apaga las notificaciones por un par de horas y respira 🔕", 
             "siguiente": "id_1003"}
     ],
 
@@ -198,9 +202,8 @@
     },
 
     "id_1009":"mensaje_gratitud",
-    "mensaje_1009":"Está bien, recuerda que siempre puedes escribirme cuando necesites, especialmente si vuelves a enfrentar algo parecido. Aquí estaré para acompañarte 🤗",
+    "mensaje_1009":"Gracias, espero haberte ayudado a relajar tu ansiedad. Aquí estaré para acompañarte 🤗",
     "opciones_1009": [
-      { "texto": "Volver al inicio",   "siguiente": "id_1004" },
-      { "texto": "Salir",   "siguiente": null }
+      { "texto": "No hay de qué 🤧",   "siguiente": "id_1001" }
     ]
 }
