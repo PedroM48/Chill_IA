@@ -4,44 +4,44 @@
   "opciones_210": [
     {
       "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
-      "siguiente": "id_1002",
       "multimedia": {
         "tipo": "imagen",
         "archivo": "gifs/globo.gif"
       },
-      "nextAfterEval": "id_211"
+      "siguiente": "id_1010",
+      "confirmacion": "id_211"
     },
     {
       "texto": "Vamos paso a paso. Te iré guiando tranqui. Solo sigue estas indicaciones:\n• Siéntate cómodo/a. 🙋‍♂️\n• Inhala por la nariz 4 segundos, haciendo que tu abdomen se expanda. 😶‍🌫️\n• Exhala suave por la boca 6 segundos, sintiendo cómo baja la tensión. 🫠",
-      "siguiente": "id_1002",
       "multimedia": {
         "tipo": "imagen",
         "archivo": "gifs/globo.gif"
       },
-      "nextAfterEval": "id_211"
+      "siguiente": "id_1010",
+      "confirmacion": "id_211"
     },
     {
       "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂",
-      "siguiente": "id_1002",      
       "multimedia": {
         "tipo": "imagen",
         "archivo": "image/Respiracion_diafragmatica.png"
-      } ,
-      "nextAfterEval": "id_211"
+      },
+      "siguiente": "id_1010",
+      "confirmacion": "id_211"
     }
   ],
   "id_211": "ejercicio_5_4_3_2_1",
-  "mensaje_211": "Mmm.. entiendo, hagamos de que te sientas mucho mejor. ¿Conoces el ejercicio 5-4-3-2-1?",
+  "mensaje_211": "Mmmm.... hagamos de que te sientas mucho mejor. ¿Conoces el ejercicio 5-4-3-2-1?",
   "opciones_211": [
     {
       "texto": "Mira y nombra 5 cosas que puedas ver alrededor. 👀\nToca y siente 4 objetos que tengas cerca. ✋\nEscucha 3 sonidos que puedas oír ahora. 👂\nPercibe 2 olores que estés sintiendo o imagina alguno. 👃\nSaborea 1 cosa, aunque sea el sabor de tu boca. 👅",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_212"
+      "siguiente": "id_1010",
+      "confirmacion": "id_212"
     },
     {
       "texto": "Paso 1: Elige o escribe 5 cosas que ves.\nPaso 2: Elige o escribe 4 cosas que tocas.\nPaso 3: Elige o escribe 3 sonidos que escuchas.\nPaso 4: Elige o escribe 2 olores que sientes.\nPaso 5: Elige o escribe 1 sabor que tengas o imagines.",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_212"
+      "siguiente": "id_1010",
+      "confirmacion": "id_212"
     }
   ],
   "id_212": "estiramientos_caminar",
@@ -49,26 +49,19 @@
   "opciones_212": [
     {
       "texto": "Caminar sin celular por 5 a 10 minutos.",
-      "siguiente": "id_1002",
-      "multimedia": {
-        "tipo": "video",
-        "archivo": "videos/estiramiento.mp4"
-      } ,
-      "nextAfterEval": "?"
+      "siguiente": "id_1010",
+      "confirmacion": "id_1002"
     },
     {
       "texto": "Realizar estiramientos.",
-      "siguiente": "id_1002",
       "multimedia": {
         "tipo": "video",
         "archivo": "videos/estiramiento.mp4"
-      } ,
-      "nextAfterEval": "?"
+      },
+      "siguiente": "id_1010",
+      "confirmacion": "id_1002"
     }
   ],
-
-
-
   "id_213": "cancion_relajante",
   "mensaje_213": "Vale, hagamos un ejercicio práctico 😊. Escuchemos una música relajante para aliviar mejor esas últimas tensiones que aún tienes.",
   "opciones_213": [
@@ -78,7 +71,8 @@
         "tipo": "audio",
         "archivo": "audios/weightless.wav"
       },
-      "siguiente": "id_204"
+      "siguiente": "id_1010",
+      "confirmacion": "id_204"
     },
     {
       "texto": "Cuando sientas que necesitas bajar el ritmo, poner una canción instrumental puede ayudarte a relajarte y despejar la mente. 🎶🎧",
@@ -86,7 +80,8 @@
         "tipo": "audio",
         "archivo": "audios/Flying.wav"
       },
-      "siguiente": "id_204"
+      "siguiente": "id_1010",
+      "confirmacion": "id_204"
     }
   ],
   "id_214": "journaling_emocional",
@@ -94,17 +89,20 @@
   "opciones_214": [
     {
       "texto": "Tómate un momento para escribir unas líneas sobre cómo te sientes ahora. No tiene que ser perfecto, solo lo que te venga a la mente. 📩",
-      "siguiente": "id_204",
+      "siguiente": "id_1010",
+      "confirmacion": "id_204",
       "mas_ayuda": "id_205"
     },
     {
       "texto": "¿Puedes escribir sobre una situación que te haya pesado últimamente? Solo cuéntalo como si se lo contaras a un amigo. 📩",
-      "siguiente": "id_204",
+      "siguiente": "id_1010",
+      "confirmacion": "id_204",
       "mas_ayuda": "id_205"
     },
     {
       "texto": "Escribe algo bueno que haya pasado hoy, por pequeño que sea. Esto ayuda a equilibrar la mente y el ánimo. 📩",
-      "siguiente": "id_204",
+      "siguiente": "id_1010",
+      "confirmacion": "id_204",
       "mas_ayuda": "id_205"
     }
   ],
@@ -113,17 +111,20 @@
   "opciones_215": [
     {
       "texto": "Tómate un minuto para cerrar los ojos, respirar profundo y soltar la tensión. No necesitas más que eso. 🌬️",
-      "siguiente": "id_204",
+      "siguiente": "id_1010",
+      "confirmacion": "id_204",
       "mas_ayuda": "id_205"
     },
     {
       "texto": "Durante el día, busca un momento tranquilo para inhalar lentamente por la nariz y exhalar despacio por la boca, repitiendo varias veces. 🧘‍♂️",
-      "siguiente": "id_204",
+      "siguiente": "id_1010",
+      "confirmacion": "id_204",
       "mas_ayuda": "id_205"
     },
     {
       "texto": "Si te sientes agobiado/a, haz una pausa corta, siente tus pies en el suelo y presta atención a tu respiración por un momento. 👣",
-      "siguiente": "id_204",
+      "siguiente": "id_1010",
+      "confirmacion": "id_204",
       "mas_ayuda": "id_205"
     }
   ]

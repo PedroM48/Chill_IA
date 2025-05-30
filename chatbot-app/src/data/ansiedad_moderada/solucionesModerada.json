@@ -8,7 +8,7 @@
         "tipo": "imagen",
         "archivo": "gifs/repiracion_478.gif"
       },
-      "siguiente": "id_1002",
+      "siguiente": "id_1010",
       "nextAfterEval": "id_311"
     },
     {
@@ -17,7 +17,7 @@
         "tipo": "imagen",
         "archivo": "gifs/inspira_expira_circulo.gif"
       },
-      "siguiente": "id_1002",
+      "siguiente": "id_1010",
       "nextAfterEval": "id_311"
     }
   ],
@@ -31,14 +31,14 @@
         "tipo": "imagen",
         "archivo": "gifs/box_breathing.gif"
       },
-      "siguiente": "id_1002",
+      "siguiente": "id_1010",
       "nextAfterEval": "id_312"
     },
     {
       "texto": "Inhala… 1-2-3-4\nMantén… 1-2-3-4 (suena un cuenco suave)\nExhala… 1-2-3-4\nMantén… 1-2-3-4 (nuevo sonido de cuenco) 🚊",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_312"
+      "siguiente": "id_1010",
+      "confirmacion": "id_312"
     }
   ],
 
@@ -51,17 +51,16 @@
         "tipo": "imagen",
         "archivo": "gifs/blue_butterfly_2.gif"
       },
-      "siguiente": "id_1002",
-      "nextAfterEval": "?"
+      "siguiente": "id_1010",
+      "confirmacion": "id_1002"
     },
     {
       "texto": "Golpea suave al compás de la vibración — tu propio latido de calma. 🖼️",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "?"
+      "siguiente": "id_1010",
+      "confirmacion": "id_1002"
     }
   ],
-
 
   "id_313": "escuchar_sonidos_naturales",
   "mensaje_313": "Genial. Escuchemos la naturaleza un momento; elige el ambiente que prefieras.",
@@ -72,7 +71,8 @@
         "tipo": "audio",
         "archivo": "audios/lluvia.mp3"
       },
-      "siguiente": "id_304"  
+      "siguiente": "id_1010",
+      "confirmacion": "id_304"  
     },
     {
       "texto": "Visualiza en tu mente el viento suave de la playa y el sonido de las olas relajantes. 🌊",
@@ -80,7 +80,8 @@
         "tipo": "audio",
         "archivo": "audios/relaxing_at_sea.mp3"
       },
-      "siguiente": "id_304"
+      "siguiente": "id_1010",
+      "confirmacion": "id_304"
     }
   ],
 
@@ -90,7 +91,8 @@
     {
       "texto": "Audio guiado 5 min + campanitas sutiles 🔔",
       "multimedia": "",
-      "siguiente": "id_305"
+      "siguiente": "id_1010",
+      "confirmacion": "id_305"
     },
     {
       "texto": "Video de bosque tranquilo con voz susurrada (texto en pantalla “Vuelve a la respiración”) 🌳",
@@ -98,52 +100,59 @@
         "tipo": "video",
         "archivo": "videos/bosque tranquilo 2.mp4"
       },
-      "siguiente": "id_305"
+      "siguiente": "id_1010",
+      "confirmacion": "id_305"
     }
   ],
 
-  
   "id_315": "reencuadre_mental",
   "mensaje_315": "La ansiedad a veces nos habla con voz dura. Te propongo un pequeño cambio de perspectiva: piensa en tu preocupación y háblate como a tu mejor amigo. 💬",
   "opciones_315": [
     {
       "texto": "Escribe un mensaje de ánimo como si fuera para ese amigo. 📝",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     },
     {
       "texto": "Graba un audio breve y luego escúchalo con auriculares. 🎙️",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     },
     {
       "texto": "Elige frases positivas pre-cargadas y mándatelas a ti mismo. 💌",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     }
   ],
+
   "id_316": "tecnica_objeto_ancla",
   "mensaje_316": "La Técnica del Objeto Ancla te ayuda a centrar tu mente enfocándote en un objeto que te transmita calma y seguridad. 💫",
   "opciones_316": [
     {
       "texto": "Por ejemplo, trata de observar un objeto cercano y describirlo con detalle. 👀",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     },
     {
       "texto": "Intenta sostener un objeto que te guste y siente su textura. 🤲",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     },
     {
       "texto": "Trta de recordar un objeto que te calme y visualízalo mentalmente. 🧠",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     }
   ],
@@ -154,19 +163,22 @@
     {
       "texto": "Inhala contando hasta 4. 🌬️",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     },
     {
       "texto": "Mantén la respiración contando hasta 4. ⏸️",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     },
     {
       "texto": "Exhala contando hasta 4. 💨",
       "multimedia": "",
-      "siguiente": "id_305",
+      "siguiente": "id_1010",
+      "confirmacion": "id_305",
       "mas_ayuda": "id_306"
     }
   ]

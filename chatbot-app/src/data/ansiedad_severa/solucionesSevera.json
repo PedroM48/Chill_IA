@@ -5,20 +5,20 @@
     {
       "texto": "Escribe tu pensamiento más angustiante; luego anota tres evidencias que lo contradigan. 📝",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_411"
+      "siguiente": "id_1010",
+      "confirmacion": "id_411"
     },
     {
       "texto": "Describe sin filtro tu temor y después responde con consejos para un amigo. 🎙️",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_411"
+      "siguiente": "id_1010",
+      "confirmacion": "id_411"
     },
     {
       "texto": "Selecciona un pensamiento catastrófico de la lista y elige explica tipo de soluciones ayudarían. 📋",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_411"
+      "siguiente": "id_1010",
+      "confirmacion": "id_411"
     }
   ],
   "id_411": "terapia_aceptacion_compromiso",
@@ -27,20 +27,20 @@
     {
       "texto": "Elige tu valor importante y planifica una acción de 5 min para hacer con ellos hoy. Si deseas llámalos o escríbeles y comprométete en realizarlo. ✅",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_412"
+      "siguiente": "id_1010",
+      "confirmacion": "id_412"
     },
     {
       "texto": "Medita 2 min repitiendo: “La ansiedad puede venir, pero yo avanzo hacia lo valioso”. 🧘",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_412"
+      "siguiente": "id_1010",
+      "confirmacion": "id_412"
     },
     {
       "texto": "Escribe un compromiso: “Aunque sienta miedo, llamaré a…”, y mándate un recordatorio. 📩",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "id_412"
+      "siguiente": "id_1010",
+      "confirmacion": "id_412"
     }
   ],
   "id_412": "relajacion_muscular_progresiva",
@@ -49,29 +49,29 @@
     {
       "texto": "Durante 8 min; con cada campana indica “estira, tensa 5 s, suelta 7 s”. 🎧",
       "multimedia": "",
-      "siguiente": "id_1002",
-      "nextAfterEval": "?"
+      "siguiente": "id_1010",
+      "confirmacion": "id_1002"
     },
     {
       "texto": "Checklist de 5 estiramientos; marca al completar y ve progreso. ✔️\n\n1. Estiramiento de cuello: Inclina la cabeza hacia un lado, mantén 20 segundos. Cambia de lado.\n2. Estiramiento de hombros: Lleva un brazo cruzado frente al pecho y presiona con el otro. Mantén 20 segundos por lado.\n3. Estiramiento de espalda: Siéntate derecho y gira el torso lentamente hacia la derecha, mantén 20 segundos, luego hacia la izquierda.\n4. Estiramiento de brazos: Estira un brazo hacia arriba y dobla el codo para tocar la espalda. Presiona suavemente con la otra mano. Mantén 20 segundos por brazo.\n5. Estiramiento de piernas: De pie, flexiona una pierna hacia atrás agarrando el pie con la mano para estirar el muslo. Mantén 20 segundos y cambia.",
-      "siguiente": "id_1002",
-      "nextAfterEval": "?"
+      "siguiente": "id_1010",
+      "confirmacion": "id_1002"
     }
   ],
-
-
   "id_413": "respiracion_alternada_fosas",
   "mensaje_33": "Para empezar, probemos una respiración muy potente: alternar fosas nasales equilibra tu sistema nervioso y despeja la mente en pocos minutos. ¿Te animas a intentarlo ahora mismo? 🫂",
   "opciones_33": [
     {
       "texto": "Tendrás que colocar un dedo tapando una fosa nasal, inhalas y exhalas durante un par de segundo despacio, luego alternas con la otra fosa y así.",
       "multimedia": "",
-      "siguiente": "id_404"
+      "siguiente": "id_1010",
+      "confirmacion": "id_404"
     },
     {
       "texto": "Al ritmo del timbre, harás los cambios de fosa nasal cada ciclo.",
       "multimedia": "",
-      "siguiente": "id_404"
+      "siguiente": "id_1010",
+      "confirmacion": "id_404"
     }
   ],
   "id_414": "estimulo_frio_breve",
@@ -80,47 +80,51 @@
     {
       "texto": "Tienes tres opciones: muñecas, cara, cuello. Agarra un cubo de hielo (preferible) y ponlo en la parte del cuerpo elegida para ti.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Puedes guiarte del siguiente video, realiza las mismas acciones y refrescate lentamente.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
-
   "id_415": "tecnica_stop_detallada",
   "mensaje_415": "Te explico, la técnica Stop Detallada, consiste en detenerte un instante de lo que estés haciendo, dejando que tu mente ponga el freno. 🛑🫠",
   "opciones_415": [
     {
       "texto": "Deja de hacer lo que haces, olvida todo por un momento, respira lentamente, cierra los ojos y siente tu alrededor.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Mira la siguiente imagen, ahora, cierra los ojos e imagínate en aquel lugar durante un par de segundos.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
-
   "id_416": "evitar_pensamientos_catastroficos",
   "mensaje_416": "Anota tus peores “y si…?”, al como “y si... dejo de hacerlo? y si no lo hago? y si es mejor hacerlo después”. 😰",
   "opciones_416": [
     {
       "texto": "Podrías escribirlo de esta forma “y si...? / debería entonces .... (hacerlo sí o sí, dejarlo para después, hacerlo por partes, no hacerlo)\nAsí podrías tener mucho una mejor visión de los hechos",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Yo te hago una pregunta, ¿y si lo escribes ahora?, ¿qué pasa?, pues... hazlo y verás, no es bueno a veces ver el lado negativo de las cosas. Sé positivo, tú puedes",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
@@ -130,31 +134,36 @@
     {
       "texto": "Búscate un cojín, peluche o algo que puedas presionar muy fuerte sin hacerte daño. Si ves que no te basta, y si puedes, pégalo a ti y grita lo más fuerte que puedas.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Cierra la boca y aprieta muy suavemente los dientes durante 2 o 3 segundos, luego afloja por completo. Repítelo con pausas de 5 segundo, solo 3 veces (preferiblemente).",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Entrelaza los dedos y apriétalos con muy poca fuerza (como si sujetaras una pluma) 2 segundos, luego suéltalos. Puedes hacer 10 repeticiones para liberar estrés acumulado.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Baja apenas 5 o 10 cm (como un mini asiento), mantén 2 segundos y sube. Repítelo 8 veces para soltar tensión.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Con el pulgar de una mano, presiona suavemente (1 o 2 segundos) la base de la palma opuesta. Deslizalo en pequeños círculos y luego cambia de mano.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
@@ -164,19 +173,22 @@
     {
       "texto": "Apoya la espalda completamente recta contra la pared.\nDobla las rodillas formando un ángulo de 90°.\nMantén los pies firmes en el suelo, separados al ancho de las caderas.\nRespira profundamente durante 1 o 2 minutos sintiendo el apoyo constante.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Siéntate en el suelo con las plantas de los pies juntas frente a ti.\nApoya la espalda en la pared, rodillas abiertas a los lados.\nColoca las manos sobre las rodillas para notar la conexión suelo–pared.\nMantén la postura 1–2 minutos, inhalando y exhalando despacio.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Apoya la espalda en la pared y baja en cuclillas hasta donde te resulte cómodo (menos de 90° si lo prefieres).\nSostén 5–10 segundos, sube un poco, y repite 3–5 veces.\nEsta mini-sentadilla ayuda a liberar tensión en piernas y lumbares mientras te sustentas.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
@@ -186,19 +198,22 @@
     {
       "texto": "Podrías elegir una de estas: “Estoy a salvo aquí y ahora” o “Soy capaz de manejar esto”.\nLuego repítela muchas veces en tu cabeza durante un par de minutos, enserio, hazlo y te sentirás mejor. 💭",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Podrías configurar recordatorios o alarmas cada pocas horas, ¿para? la idea es que muestren automáticamente o puedas leer tu afirmación, para resetear tu foco mental. ⏰🏆",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Una forma es combinar alguna música tranquila, busca o crea un audio donde una voz repita tu frase sobre una base musical suave o sonidos de la naturaleza. 🎶🎵",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
@@ -208,25 +223,29 @@
     {
       "texto": "Ojo, también puedes programar un recordatorio diario para escribir 5 min cada mañana o hacerlo solo en momentos de tensión intensa.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Espera, antes de escribir, pon música suave o haz 3 respiraciones profundas. Así señalas a tu mente que empieza un espacio seguro para expresarte.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Importante, te lo recalco, no borres ni taches lo que pongas. Si cambias de idea, sigue escribiendo. Si repites palabras, está bien: se trata de vaciar la mente, no de un texto pulido.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Abre la frase con “Me siento…” o “Ahora estoy…”, y deja que fluya.\nPor ejemplo: “Me siento tenso porque…” o “Ahora estoy confundido y…”.",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ],
@@ -236,25 +255,29 @@
     {
       "texto": "Tómate 1 minuto para pensar en tareas pequeñas y concretas, aunque sean pequeñas o simples como: beber un vaso de agua, ordenar un montón de papeles, estirarte 5 minutos, dar una vuelta al pasillo o escribir un párrafo. ✍️📋",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "No te sobrecargues: selecciona solo una o dos acciones que sean fáciles de encajar en tu rutina inmediata.\nEjemplo: “Voy a beber un vaso de agua en los próximos 10 min.” o algo como “Voy a sacar la basura antes de la próxima pausa.” 😶‍🌫️",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Apunta tus objetivos en un post-it, en la app de notas o en tu recordatorio: verlos por escrito los convierte en compromisos más tangibles. 📔",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     },
     {
       "texto": "Configura una alarma o notificación para dentro de un tiempo breve (15–30 min). Así te “avisa” que es hora de poner tu plan en marcha. ⌚",
       "multimedia": "",
-      "siguiente": "id_405",
+      "siguiente": "id_1010",
+      "confirmacion": "id_405",
       "mas_ayuda": "id_406"
     }
   ]

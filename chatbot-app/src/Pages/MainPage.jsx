@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import globales from "../data/globales.json";
 import botAvatar from "../multimedia/bot.png";
 import userAvatar from "../multimedia/user.png";
-import mensajesLeve from "../data/ansiedad_leve/mensajesLeve.json";
-import solucionesLeve from "../data/ansiedad_leve/solucionesLeve.json";
-import mensajesModerada from "../data/ansiedad_leve/mensajesLeve.json";
-import solucionesModerada from "../data/ansiedad_leve/solucionesLeve.json";
-import mensajesSevera from "../data/ansiedad_leve/mensajesLeve.json";
-import solucionesSevera from "../data/ansiedad_leve/solucionesLeve.json";
 import "./MainPage.css";
 
-/**
- * Fusionamos todos los flujos en un único objeto para buscarlos por ID.
- */
+import globales from "../data/globales.json";
+import mensajesLeve from "../data/ansiedad_leve/mensajesLeve.json";
+import solucionesLeve from "../data/ansiedad_leve/solucionesLeve.json";
+import mensajesModerada from "../data/ansiedad_moderada/mensajesModerada.json";
+import solucionesModerada from "../data/ansiedad_moderada/solucionesModerada.json";
+import mensajesSevera from "../data/ansiedad_severa/mensajesSevera.json";
+import solucionesSevera from "../data/ansiedad_severa/solucionesSevera.json";
+import mensajesNoSintomas from "../data/no_sintomas/mensajesNoSintomas.json";
+import mensajesEmergencia from "../data/emergencia/mensajesEmergencia.json";
+
 const flows = {
   ...globales,
   ...mensajesLeve,
@@ -21,121 +21,169 @@ const flows = {
   ...solucionesModerada,
   ...mensajesSevera,
   ...solucionesSevera,
+  ...mensajesNoSintomas,
+  ...mensajesEmergencia,
 };
 
 export default function MainPage() {
   const INITIAL_ID = "id_1004";
-
-  /** MENSAJES que se muestran en la UI */
   const [messages, setMessages] = useState([
-    { from: "bot", text: flows[`mensaje_${INITIAL_ID.split("_")[1]}`] },
+    { from: "bot", text: flows[`mensaje_${INITIAL_ID.split("_")[1]}`] }
   ]);
-
-  /** CONTROL DE ESTADO */
   const [currentId, setCurrentId] = useState(INITIAL_ID);
-  const [typing, setTyping]   = useState(false);
-  const [nextAfterEval, setNextAfterEval] = useState(null);
-  const [leveScores, setLeveScores]       = useState([]);
+  const [typing, setTyping] = useState(false);
 
-  /** GAD‑7 */
-  const [isGadFlow, setIsGadFlow]       = useState(false);
+  // GAD flow state
+  const [isGadFlow, setIsGadFlow] = useState(false);
   const [gadQuestions, setGadQuestions] = useState([]);
-  const [gadIndex, setGadIndex]         = useState(0);
-  const [scores, setScores]             = useState([]);
+  const [gadIndex, setGadIndex] = useState(0);
+  const [scores, setScores] = useState([]);
 
-  /** MULTIMEDIA ACTUAL */
-  const [mediaActual, setMediaActual]   = useState(null);
+  // Confirm and level state
+  const [pendingConfirmId, setPendingConfirmId] = useState(null);
+  const [currentLevelPrefix, setCurrentLevelPrefix] = useState(null);
 
-  /**
-   * Al cambiar de ID mostramos automáticamente los mensajes encadenados con
-   * `nextAfterEval` (ramas de decisión internas en tu JSON).
-   */
-  useEffect(() => {
-    if (currentId !== "id_1002") return;  
-    const step     = currentId.split("_")[1];
-    const opciones = flows[`opciones_${step}`] || [];
+  // Track visits to solution nodes
+  const [solutionVisits, setSolutionVisits] = useState({});
 
-    if (opciones.length && opciones[0].nextAfterEval) {
-      const chosen = opciones[Math.floor(Math.random() * opciones.length)];
-      setTyping(true);
-      setNextAfterEval(chosen.nextAfterEval);
+  // Multimedia state
+  const [mediaActual, setMediaActual] = useState(null);
 
-      setTimeout(() => {
-        setMessages(prev => [...prev, { from: "bot", text: chosen.texto }]);
-
-        const evalId = chosen.siguiente;
-        setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${evalId.split("_")[1]}`] }]);
-        setCurrentId(evalId);
-        setTyping(false);
-      }, 2000);
-    }
-  }, [currentId]);
-
-  /** Inicializa flujo GAD‑7 */
   const startGadFlow = () => {
     const raw = flows.opciones_1008;
-    const questions = Array.from({ length: 7 }, (_, i) => ({
-      id:      raw[`id_1008${i + 1}`],
-      text:    raw[`text_1008${i + 1}`],
-      options: raw[`options_1008${i + 1}`],
-    }));
-
+    const questions = [];
+    for (let i = 1; i <= 7; i++) {
+      questions.push({
+        id: raw[`id_1008${i}`],
+        text: raw[`text_1008${i}`],
+        options: raw[`options_1008${i}`]
+      });
+    }
     setGadQuestions(questions);
     setGadIndex(0);
     setIsGadFlow(true);
     setMessages(prev => [...prev, { from: "bot", text: questions[0].text }]);
   };
 
-  /**
-   * Maneja clic en opción del usuario
-   */
-  const handleOption = (opt) => {
+  const isSolutionNode = id => {
+    if (!id) return false;
+    const num = parseInt(id.split("_")[1], 10);
+    return (num >= 210 && num <= 215) || (num >= 310 && num <= 317) || (num >= 410 && num <= 421);
+  };
+
+  // Maintain level prefix except during evaluation node
+  useEffect(() => {
+    if (currentId === "id_1002") return;
+    const prefix = currentId.split("_")[1].charAt(0);
+    setCurrentLevelPrefix(["1","2","3","4","5"].includes(prefix) ? prefix : null);
+  }, [currentId]);
+
+  // Auto-handle solution nodes
+  useEffect(() => {
+    if (!isSolutionNode(currentId)) return;
+    const base = parseInt(currentId.split("_")[1], 10);
+    const opciones = flows[`opciones_${base}`] || [];
+    if (!opciones.length) return;
+
+    // manage visit count
+    const visits = solutionVisits[base] || 0;
+    const updatedVisits = { ...solutionVisits, [base]: visits + 1 };
+    setSolutionVisits(updatedVisits);
+
+    // choose random option
+    const randomOpt = opciones[Math.floor(Math.random() * opciones.length)];
+
+    setTyping(true);
+    setTimeout(() => {
+      setMessages(prev => [...prev, { from: "bot", text: randomOpt.texto }]);
+
+      if (visits >= 1 && randomOpt.mas_ayuda) {
+        const ayudaId = randomOpt.mas_ayuda;
+        setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${ayudaId.split("_")[1]}`] }]);
+        setCurrentId(ayudaId);
+      } else {
+        setPendingConfirmId(randomOpt.confirmacion);
+        setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_1010`] }]);
+        setCurrentId("id_1010");
+      }
+      setTyping(false);
+    }, 500);
+  }, [currentId]);
+
+  const handleOption = opt => {
     const userText = opt.texto || `${opt.emoji} ${opt.label}`;
     setMessages(prev => [...prev, { from: "user", text: userText }]);
+    setTyping(true);
 
-    // 🔹 Actualiza multimedia (imagen / audio / video)
+    // multimedia
     if (typeof opt.multimedia === "object" && opt.multimedia !== null) {
       setMediaActual(opt.multimedia);
     } else {
       setMediaActual(null);
     }
 
-    console.log("Multimedia recibida:", opt.multimedia);
+    setTimeout(() => {
+      // confirmation "Si" on id_1010
+      if (currentId === "id_1010") {
+        if (pendingConfirmId) {
+          setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${pendingConfirmId.split("_")[1]}`] }]);
+          setCurrentId(pendingConfirmId);
+          setPendingConfirmId(null);
+        } else {
+          setMessages(prev => [...prev, { from: "bot", text: "¡Gracias!" }]);
+        }
+        setTyping(false);
+        return;
+      }
 
+      // evaluation responses (id_1002)
+      if (currentId === "id_1002") {
+        let nextId;
+        const txt = opt.texto;
+        if (currentLevelPrefix === "1") {
+          if (["🫠 Todavía me cuesta","🤷 Igual que antes"].includes(txt)) nextId = "id_203";
+          else if (txt === "😌 Un poco mejor") nextId = "id_202";
+          else nextId = "id_201";
+        } else if (currentLevelPrefix === "2") {
+          if (["🫠 Todavía me cuesta","🤷 Igual que antes"].includes(txt)) nextId = "id_303";
+          else if (txt === "😌 Un poco mejor") nextId = "id_302";
+          else nextId = "id_301";
+        } else if (currentLevelPrefix === "3") {
+          if (["🫠 Todavía me cuesta","🤷 Igual que antes"].includes(txt)) nextId = "id_403";
+          else if (txt === "😌 Un poco mejor") nextId = "id_402";
+          else nextId = "id_401";
+        }
+        if (nextId) {
+          setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${nextId.split("_")[1]}`] }]);
+          setCurrentId(nextId);
+        }
+        setTyping(false);
+        return;
+      }
 
-    // Guarda nextAfterEval si aplica
-    if (opt.nextAfterEval) setNextAfterEval(opt.nextAfterEval);
-
-    // Entrar en GAD‑7
-    if (opt.siguiente === "id_1008") {
-      setTyping(true);
-      setTimeout(() => {
+      // start GAD
+      if (opt.siguiente === "id_1008") {
         setMessages(prev => [...prev, { from: "bot", text: flows.mensaje_1008 }]);
         startGadFlow();
         setTyping(false);
-      }, 3000); 
-      return;
-    }
+        return;
+      }
 
-    setTyping(true);
-    setTimeout(() => {
-      // -------------- GAD‑7 EN PROGRESO --------------
+      // GAD flow
       if (isGadFlow) {
-        const updated = [...scores, opt.score];
-        setScores(updated);
-
+        const newScores = [...scores, opt.score];
+        setScores(newScores);
         const nextIdx = gadIndex + 1;
         if (nextIdx < gadQuestions.length) {
           setMessages(prev => [...prev, { from: "bot", text: gadQuestions[nextIdx].text }]);
           setGadIndex(nextIdx);
         } else {
-          const total = updated.reduce((s, n) => s + n, 0);
+          const total = newScores.reduce((a,b) => a + b, 0);
           let nextId;
-          if (total <= 4)       nextId = "id_500";
-          else if (total <= 9)  nextId = "id_200";
+          if (total <= 4) nextId = "id_100";
+          else if (total <= 9) nextId = "id_200";
           else if (total <= 14) nextId = "id_300";
-          else                  nextId = "id_400";
-
+          else nextId = "id_400";
           setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${nextId.split("_")[1]}`] }]);
           setCurrentId(nextId);
           setIsGadFlow(false);
@@ -145,44 +193,22 @@ export default function MainPage() {
         return;
       }
 
-      // -------------- FLUJO NORMAL --------------
-      if (!opt.siguiente) {
-        setMessages(prev => [...prev, { from: "bot", text: "¡Hasta luego! Hasta la próxima." }]);
-        setTyping(false);
-        return;
+      // normal flows
+      if (opt.siguiente) {
+        setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${opt.siguiente.split("_")[1]}`] }]);
+        setCurrentId(opt.siguiente);
+      } else {
+        setMessages(prev => [...prev, { from: "bot", text: "¡Hasta luego!" }]);
       }
-
-      const rawNext = opt.siguiente === "{{nextAfterEval}}" && nextAfterEval
-        ? nextAfterEval
-        : opt.siguiente;
-
-      // Nivel de ansiedad leve: promedia puntaje cada 3 preguntas
-      if (opt.score !== undefined) {
-        const newScores = [...leveScores, opt.score];
-        setLeveScores(newScores);
-        if (newScores.length === 3) {
-          const avg = newScores.reduce((a, b) => a + b, 0) / 3;
-          const evalId = avg > 3 ? "id_201" : avg > 2 ? "id_202" : "id_203";
-          setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${evalId.split("_")[1]}`] }]);
-          setCurrentId(evalId);
-          setLeveScores([]);
-          setTyping(false);
-          return;
-        }
-      }
-
-      setMessages(prev => [...prev, { from: "bot", text: flows[`mensaje_${rawNext.split("_")[1]}`] }]);
-      setCurrentId(rawNext);
       setTyping(false);
-    }, 2000);
+    }, 1500);
   };
 
-  /** Renderiza botones de opciones */
   const renderOptions = () => {
     if (isGadFlow) {
       return (
         <div className="options-area">
-          {gadQuestions[gadIndex].options.map((o, i) => (
+          {gadQuestions[gadIndex].options.map((o,i) => (
             <button key={i} onClick={() => handleOption(o)} className="option-btn">
               {o.emoji} {o.label}
             </button>
@@ -190,62 +216,71 @@ export default function MainPage() {
         </div>
       );
     }
-
+    if (["id_1010","id_1002"].includes(currentId)) {
+      const opts = flows[`opciones_${currentId.split("_")[1]}`] || [];
+      return (
+        <div className="options-area">
+          {opts.map((o,i) => (
+            <button key={i} onClick={() => handleOption(o)} className="option-btn">
+              {o.texto}
+            </button>
+          ))}
+        </div>
+      );
+    }
+    if (isSolutionNode(currentId)) return null;
     const opciones = flows[`opciones_${currentId.split("_")[1]}`] || [];
-    if (!opciones.length) return null; // se manejará en useEffect
-
     return (
       <div className="options-area">
-        {opciones.map((opt, i) => (
+        {opciones.map((opt,i) => (
           <button key={i} onClick={() => handleOption(opt)} className="option-btn">
             {opt.texto}
           </button>
         ))}
       </div>
     );
-  };  
-
-  console.log("MEDIA ACTUAL:", mediaActual);
-
+  };
 
   return (
     <div className="chat-container">
       <h1>CHILL IA 🤙</h1>
       <div className="chat-box">
-        
-        {messages.map((msg, i) => (
-  <div key={i} className={`message-row ${msg.from}`}>
-    <img src={msg.from === 'bot' ? botAvatar : userAvatar} className="avatar" alt="" />
-    <div className={`bubble ${msg.from}`}>
-
-      {msg.from === "bot" && i === messages.length - 1 && mediaActual && (
-        <div className="media-area">
-          {mediaActual.tipo === "audio" && (
-            <audio controls>
-              <source src={`/multimedia/${mediaActual.archivo}`} type="audio/mpeg" />
-              Tu navegador no soporta el audio.
-            </audio>
-          )}
-          {mediaActual.tipo === "imagen" && (
-            <img src={`/multimedia/${mediaActual.archivo}`} alt="Visual" className="media-img" />
-          )}
-          {mediaActual.tipo === "video" && (
-            <video controls width="100%">
-              <source src={`/multimedia/${mediaActual.archivo}`} type="video/mp4" />
-              Tu navegador no soporta el video.
-            </video>
-          )}
-        </div>
-      )}      
-      
-      <span>{msg.text}</span>
-
-      {i === messages.length - 1 && !typing && renderOptions()} 
-    </div>
-  </div>
-))}
-
-        {typing && (<div className="message-row bot"><img src={botAvatar} className="avatar" alt="" /><div className="bubble bot typing"><span>Chill IA está escribiendo...</span></div></div>)}
+        {messages.map((msg,i) => (
+          <div key={i} className={`message-row ${msg.from}`}>
+            <img src={msg.from==='bot'?botAvatar:userAvatar} className="avatar" alt="" />
+            <div className={`bubble ${msg.from}`}>
+              {msg.from === "bot" && i === messages.length - 1 && mediaActual && (
+                <div className="media-area">
+                  {mediaActual.tipo === "audio" && (
+                    <audio controls>
+                      <source src={`/multimedia/${mediaActual.archivo}`} type="audio/mpeg" />
+                      Tu navegador no soporta el audio.
+                    </audio>
+                  )}
+                  {mediaActual.tipo === "imagen" && (
+                    <img src={`/multimedia/${mediaActual.archivo}`} alt="Visual" className="media-img" />
+                  )}
+                  {mediaActual.tipo === "video" && (
+                    <video controls width="100%">
+                      <source src={`/multimedia/${mediaActual.archivo}`} type="video/mp4" />
+                      Tu navegador no soporta el video.
+                    </video>
+                  )}
+                </div>
+              )}
+              <span>{msg.text}</span>
+              {i===messages.length-1 && !typing && renderOptions()}
+            </div>
+          </div>
+        ))}
+        {typing && (
+          <div className="message-row bot">
+            <img src={botAvatar} className="avatar" alt="Bot" />
+            <div className="bubble bot typing">
+              <span>Chill IA está escribiendo...</span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
