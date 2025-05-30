@@ -1,7 +1,7 @@
 {
   "id_300": "mensaje_inicio_MODERADA",
-  "mensaje_200": "Hey, noto que la ansiedad anda un poco más presente de lo habitual. No pasa nada, vamos con calma, tú marcas el ritmo. 🫂",
-  "opciones_200": [
+  "mensaje_300": "Hey, noto que la ansiedad anda un poco más presente de lo habitual. No pasa nada, vamos con calma, tú marcas el ritmo. 🫂",
+  "opciones_300": [
     {
       "texto": "Vale 😮‍💨",
       "siguiente": "id_310"
