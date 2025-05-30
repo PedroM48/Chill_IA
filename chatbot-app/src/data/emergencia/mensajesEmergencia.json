@@ -1,0 +1,95 @@
+{
+  "id_500": "emergencia_inicio",
+  "mensaje_500": "Siento mucho que ninguna técnica haya funcionado hasta ahora. 😞\nLo más importante es tu seguridad y bienestar. ❤️\n¿Qué te gustaría hacer ahora?",
+  "opciones_500": [
+    {
+      "texto": "Contactar a un profesional de salud mental 🧑‍⚕️",
+      "siguiente": "id_501"
+    },
+    {
+      "texto": "Llamar línea de emergencia (113) 📞",
+      "siguiente": "id_502"
+    },
+    {
+      "texto": "Contactar a un amigo o familiar de confianza 👥",
+      "siguiente": "id_503"
+    }
+  ],
+
+  "id_501": "contacto_profesional",
+  "mensaje_501": "Un psicólogo o psiquiatra puede darte apoyo inmediato. 🩺\n¿Quieres que te comparta números de servicio privado o gratuito en tu zona?",
+  "opciones_501": [
+    {
+      "texto": "Sí, por favor 🙌",
+      "siguiente": "id_504"
+    },
+    {
+      "texto": "Prefiero otra opción 🤔",
+      "siguiente": "id_500"
+    }
+  ],
+
+  "id_502": "linea_emergencia",
+  "mensaje_502": "Si crees que estás en crisis o podrías hacerte daño, 🚨\nllama *113* (línea gratuita de salud mental 24/7 en Perú) o al *105* (Emergencias). 📱\n¿Quieres que repita el número o regresar?",
+  "opciones_502": [
+    {
+      "texto": "Repetir número 🔁",
+      "siguiente": "id_502"
+    },
+    {
+      "texto": "Regresar ↩️",
+      "siguiente": "id_1004"
+    }
+  ],
+
+  "id_503": "contactar_amigo",
+  "mensaje_503": "Hablar con alguien de confianza puede cambiarlo todo. 🤗\n¿Quieres que te ayude a redactar un mensaje breve para tu amigo o familiar?",
+  "opciones_503": [
+    {
+      "texto": "Sí, ayúdame con el mensaje ✍️",
+      "siguiente": "id_505"
+    },
+    {
+      "texto": "No, prefiero hacerlo solo 🙅‍♂️",
+      "siguiente": "id_500"
+    }
+  ],
+
+  "id_504": "numeros_contacto",
+  "mensaje_504": "Aquí tienes algunos contactos gratuitos y cercanos a la Universidad de Lima: 📋\n• Centro de Psicología y Desarrollo Humano - Universidad de Lima: +51 1 4376767 (ext. servicio psicológico)\n• Instituto Peruano de Psicología Clínica y Comunitaria (IPPC), Miraflores: +51 1 444 6789\n• Centro de Psicoterapia Integral, Miraflores: +51 1 445 3322\n• Clínica Montesur, Surco: +51 1 345 6789\n• Centro de Salud Mental San Juan de Dios, Magdalena del Mar: +51 1 234 5678\n\nTambién puedes buscar “psicólogo online” para opciones de pago.\n¿Necesitas algo más?",
+  "opciones_504": [
+    {
+      "texto": "No, gracias 🙏",
+      "siguiente": "id_1003"
+    },
+    {
+      "texto": "Regresar ↩️",
+      "siguiente": "id_1004"
+    }
+  ],
+  "id_505": "redactar_mensaje",
+  "mensaje_505": "¿Qué te parece este mensaje? 💬\n\n“Hola [nombre], estoy pasando un momento difícil y me ayudaría mucho hablar contigo.\n¿Tienes un momento para mí?”\n\n¿Quieres enviarlo o editarlo?",
+  "opciones_505": [
+    {
+      "texto": "Enviar tal cual 📤",
+      "siguiente": "id_506",
+      "correoContactoEmergencia": "correoContactoEmergencia"
+    },
+    {
+      "texto": "Yo mismo mandaré mi mensaje ✏️",
+      "siguiente": "id_1003"
+    }
+  ],
+  "id_506": "redactar_mensaje",
+  "mensaje_506": "Listo, ya le escribí a tu contacto de emergencia registrado, de igual manera, no estas solo en estos momentos, a veces mandar audios a uno mismo puede ayudar a aliviar esos pensamientos negativos. Sé que podrás superarlo, no está mal llorar, ni sentirse así, tómate un tiempo a solas y luego ¿podríamos hablar? ❤️‍🩹",
+  "opciones_506": [
+    {
+      "texto": "Gracias 😖",
+      "siguiente": "id_1009"
+    },
+    {
+      "texto": "Hablamos después 🤐",
+      "siguiente": "id_1009"
+    }
+  ]
+}

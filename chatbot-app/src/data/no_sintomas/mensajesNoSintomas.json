@@ -1,0 +1,14 @@
+{
+  "id_100": "sin_sintomas_inicio",
+  "mensaje_100": "¡Genial! No presentas síntomas significativos de ansiedad. 🎉\nRecuerda que mantener hábitos saludables ayuda a seguir así. 😊",
+  "opciones_100": [
+    {
+      "texto": "Quiero consejos para mantenerme bien 👍",
+      "siguiente": "id_1001"
+    },
+    {
+      "texto": "Prefiero salir y continuar después 💤",
+      "siguiente": "id_1003"
+    }
+  ]
+}

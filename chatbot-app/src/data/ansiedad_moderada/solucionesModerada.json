@@ -72,8 +72,7 @@
         "tipo": "audio",
         "archivo": "audios/lluvia.mp3"
       },
-      "siguiente": "id_999",
-      "nextAfterEval": "id_24"
+      "siguiente": "id_304"  
     },
     {
       "texto": "Visualiza en tu mente el viento suave de la playa y el sonido de las olas relajantes. 🌊",
@@ -81,8 +80,7 @@
         "tipo": "audio",
         "archivo": "audios/relaxing_at_sea.mp3"
       },
-      "siguiente": "id_999",
-      "nextAfterEval": "id_24"
+      "siguiente": "id_304"
     }
   ],
 
@@ -92,8 +90,7 @@
     {
       "texto": "Audio guiado 5 min + campanitas sutiles 🔔",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_25"
+      "siguiente": "id_305"
     },
     {
       "texto": "Video de bosque tranquilo con voz susurrada (texto en pantalla “Vuelve a la respiración”) 🌳",
@@ -101,31 +98,76 @@
         "tipo": "video",
         "archivo": "videos/bosque tranquilo 2.mp4"
       },
-      "siguiente": "id_999",
-      "nextAfterEval": "id_25"
+      "siguiente": "id_305"
     }
   ],
 
+  
   "id_315": "reencuadre_mental",
   "mensaje_315": "La ansiedad a veces nos habla con voz dura. Te propongo un pequeño cambio de perspectiva: piensa en tu preocupación y háblate como a tu mejor amigo. 💬",
   "opciones_315": [
     {
       "texto": "Escribe un mensaje de ánimo como si fuera para ese amigo. 📝",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_26"
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
     },
     {
       "texto": "Graba un audio breve y luego escúchalo con auriculares. 🎙️",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_26"
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
     },
     {
       "texto": "Elige frases positivas pre-cargadas y mándatelas a ti mismo. 💌",
       "multimedia": "",
-      "siguiente": "id_999",
-      "nextAfterEval": "id_26"
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
+    }
+  ],
+  "id_316": "tecnica_objeto_ancla",
+  "mensaje_316": "La Técnica del Objeto Ancla te ayuda a centrar tu mente enfocándote en un objeto que te transmita calma y seguridad. 💫",
+  "opciones_316": [
+    {
+      "texto": "Por ejemplo, trata de observar un objeto cercano y describirlo con detalle. 👀",
+      "multimedia": "",
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
+    },
+    {
+      "texto": "Intenta sostener un objeto que te guste y siente su textura. 🤲",
+      "multimedia": "",
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
+    },
+    {
+      "texto": "Trta de recordar un objeto que te calme y visualízalo mentalmente. 🧠",
+      "multimedia": "",
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
+    }
+  ],
+
+  "id_317": "respiracion_box_breathing",
+  "mensaje_317": "La respiración en caja (Box Breathing) es una técnica sencilla para calmar tu cuerpo y mente. ¿Quieres intentarla conmigo?",
+  "opciones_317": [
+    {
+      "texto": "Inhala contando hasta 4. 🌬️",
+      "multimedia": "",
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
+    },
+    {
+      "texto": "Mantén la respiración contando hasta 4. ⏸️",
+      "multimedia": "",
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
+    },
+    {
+      "texto": "Exhala contando hasta 4. 💨",
+      "multimedia": "",
+      "siguiente": "id_305",
+      "mas_ayuda": "id_306"
     }
   ]
 }
