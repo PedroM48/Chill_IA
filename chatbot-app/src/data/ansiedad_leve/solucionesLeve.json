@@ -4,26 +4,29 @@
   "opciones_210": [
     {
       "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
+      "siguiente": "id_1002",
       "multimedia": {
         "tipo": "imagen",
         "archivo": "gifs/globo.gif"
       },
-      "siguiente": "id_1002",
       "nextAfterEval": "id_211"
     },
     {
       "texto": "Vamos paso a paso. Te iré guiando tranqui. Solo sigue estas indicaciones:\n• Siéntate cómodo/a. 🙋‍♂️\n• Inhala por la nariz 4 segundos, haciendo que tu abdomen se expanda. 😶‍🌫️\n• Exhala suave por la boca 6 segundos, sintiendo cómo baja la tensión. 🫠",
-      "multimedia": "",
       "siguiente": "id_1002",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/globo.gif"
+      },
       "nextAfterEval": "id_211"
     },
     {
       "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂",
+      "siguiente": "id_1002",      
       "multimedia": {
         "tipo": "imagen",
         "archivo": "image/Respiracion_diafragmatica.png"
       } ,
-      "siguiente": "id_1002",
       "nextAfterEval": "id_211"
     }
   ],
@@ -47,15 +50,19 @@
     {
       "texto": "Caminar sin celular por 5 a 10 minutos.",
       "siguiente": "id_1002",
-      "nextAfterEval": "?"
-    },
-    {
-      "texto": "Realizar estiramientos.",
       "multimedia": {
         "tipo": "video",
         "archivo": "videos/estiramiento.mp4"
       } ,
+      "nextAfterEval": "?"
+    },
+    {
+      "texto": "Realizar estiramientos.",
       "siguiente": "id_1002",
+      "multimedia": {
+        "tipo": "video",
+        "archivo": "videos/estiramiento.mp4"
+      } ,
       "nextAfterEval": "?"
     }
   ],
