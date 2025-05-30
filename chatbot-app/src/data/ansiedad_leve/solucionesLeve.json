@@ -36,7 +36,11 @@
     {
       "texto": "Mira y nombra 5 cosas que puedas ver alrededor. 👀\nToca y siente 4 objetos que tengas cerca. ✋\nEscucha 3 sonidos que puedas oír ahora. 👂\nPercibe 2 olores que estés sintiendo o imagina alguno. 👃\nSaborea 1 cosa, aunque sea el sabor de tu boca. 👅",
       "siguiente": "id_1010",
-      "confirmacion": "id_212"
+      "confirmacion": "id_212",
+      "multimedia":{
+        "tipo": "imagen",
+        "placeholder": "1. …\n2. …\n3. …\n4. …\n5. …"
+      }
     },
     {
       "texto": "Paso 1: Elige o escribe 5 cosas que ves.\nPaso 2: Elige o escribe 4 cosas que tocas.\nPaso 3: Elige o escribe 3 sonidos que escuchas.\nPaso 4: Elige o escribe 2 olores que sientes.\nPaso 5: Elige o escribe 1 sabor que tengas o imagines.",

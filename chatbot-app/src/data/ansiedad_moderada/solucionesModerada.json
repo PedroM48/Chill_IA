@@ -9,7 +9,7 @@
         "archivo": "gifs/repiracion_478.gif"
       },
       "siguiente": "id_1010",
-      "nextAfterEval": "id_311"
+      "confirmacion": "id_311"
     },
     {
       "texto": "Mira este video mientras respiramos juntos. Las animaciones te van a marcar cuándo inhalar, sostener y exhalar. Respira al ritmo del círculo.🌬️\nUn círculo que se expande (inhala), se queda quieto (retén), se contrae (exhala). Texto breve en pantalla: \"Inhala\" / \"Retén\" / \"Exhala\".",
@@ -18,7 +18,7 @@
         "archivo": "gifs/inspira_expira_circulo.gif"
       },
       "siguiente": "id_1010",
-      "nextAfterEval": "id_311"
+      "confirmacion": "id_311"
     }
   ],
 
@@ -32,7 +32,7 @@
         "archivo": "gifs/box_breathing.gif"
       },
       "siguiente": "id_1010",
-      "nextAfterEval": "id_312"
+      "confirmacion": "id_312"
     },
     {
       "texto": "Inhala… 1-2-3-4\nMantén… 1-2-3-4 (suena un cuenco suave)\nExhala… 1-2-3-4\nMantén… 1-2-3-4 (nuevo sonido de cuenco) 🚊",

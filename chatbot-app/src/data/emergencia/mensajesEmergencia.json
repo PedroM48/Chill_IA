@@ -1,6 +1,6 @@
 {
   "id_500": "emergencia_inicio",
-  "mensaje_500": "Siento mucho que ninguna técnica haya funcionado hasta ahora. 😞\nLo más importante es tu seguridad y bienestar. ❤️\n¿Qué te gustaría hacer ahora?",
+  "mensaje_500": "{nombreUsuario} siento mucho que ninguna técnica haya funcionado hasta ahora. 😞\nLo más importante es tu seguridad y bienestar. ❤️\n¿Qué te gustaría hacer ahora?",
   "opciones_500": [
     {
       "texto": "Contactar a un profesional de salud mental 🧑‍⚕️",
@@ -56,24 +56,69 @@
   ],
 
   "id_504": "numeros_contacto",
-  "mensaje_504": "Aquí tienes algunos contactos gratuitos y cercanos a la Universidad de Lima: 📋\n• Centro de Psicología y Desarrollo Humano - Universidad de Lima: +51 1 4376767 (ext. servicio psicológico)\n• Instituto Peruano de Psicología Clínica y Comunitaria (IPPC), Miraflores: +51 1 444 6789\n• Centro de Psicoterapia Integral, Miraflores: +51 1 445 3322\n• Clínica Montesur, Surco: +51 1 345 6789\n• Centro de Salud Mental San Juan de Dios, Magdalena del Mar: +51 1 234 5678\n\nTambién puedes buscar “psicólogo online” para opciones de pago.\n¿Necesitas algo más?",
+  "mensaje_504": "Aquí tienes algunas ubicaciones o contactos cercanos a donde te encuentras:\n{ubicaciones}\n\n¿Necesitas algo más?",
+  "ubicaciones_504": {
+    "Ate": "• 🏥 Hospital Ate: +51 1 123 4567\n• 🩺 Clínica Familiar Ate: +51 1 234 5678",
+    "Barranco": "• 🏥 Centro de Salud Barranco: +51 1 234 6789\n• 🩺 Clínica Barranco Salud: +51 1 345 7890",
+    "Breña": "• 🏥 Hospital Breña: +51 1 345 8901\n• 🩺 Clínica Popular Breña: +51 1 456 9012",
+    "Carabayllo": "• 🏥 Hospital Carabayllo: +51 1 456 0123\n• 🩺 Centro Médico Carabayllo: +51 1 567 1234",
+    "Chaclacayo": "• 🏥 Centro de Salud Chaclacayo: +51 1 567 2345\n• 🩺 Clínica Chaclacayo: +51 1 678 3456",
+    "Chorrillos": "• 🏥 Hospital Chorrillos: +51 1 678 4567\n• 🩺 Clínica Mar Chorrillos: +51 1 789 5678",
+    "Cieneguilla": "• 🏥 Centro de Salud Cieneguilla: +51 1 789 6789\n• 🩺 Clínica Cieneguilla Rural: +51 1 890 7890",
+    "Comas": "• 🏥 Hospital Comas: +51 1 890 8901\n• 🩺 Clínica Comas Sur: +51 1 901 9012",
+    "El Agustino": "• 🏥 Centro Médico El Agustino: +51 1 901 0123\n• 🩺 Clínica Corazón de María: +51 1 012 1234",
+    "Independencia": "• 🏥 Hospital Independencia: +51 1 012 2345\n• 🩺 Clínica Independencia: +51 1 123 3456",
+    "Jesús María": "• 🏥 Centro Psicología Jesús María: +51 1 112 2334\n• 🩺 Clínica Jesús María: +51 1 223 3445",
+    "La Molina": "• 🏥 Hospital Universitario La Molina: +51 1 223 4556\n• 🩺 Clínica Molina Salud: +51 1 334 5667",
+    "La Victoria": "• 🏥 Hospital Victoria: +51 1 334 6778\n• 🩺 Clínica Popular Victoria: +51 1 445 7889",
+    "Lima": "• 🏥 Hospital Nacional de Lima: +51 1 445 8990\n• 🩺 Clínica Internacional Lima: +51 1 556 9001",
+    "Lince": "• 🏥 Centro de Salud Lince: +51 1 556 0112\n• 🩺 Clínica Lince Centro: +51 1 667 1223",
+    "Los Olivos": "• 🏥 Hospital Los Olivos: +51 1 667 2334\n• 🩺 Clínica Los Olivos: +51 1 778 3445",
+    "Lurigancho": "• 🏥 Hospital Lurigancho: +51 1 778 4556\n• 🩺 Clínica Lurigancho: +51 1 889 5667",
+    "Lurín": "• 🏥 Centro de Salud Lurín: +51 1 889 6778\n• 🩺 Clínica Poblacional Lurín: +51 1 990 7889",
+    "Magdalena del Mar": "• 🏥 Centro de Salud San Juan de Dios: +51 1 234 5678\n• 🩺 Clínica Magdalena: +51 1 345 6789",
+    "Miraflores": "• 🏥 Instituto PSIC Miraflores: +51 1 444 6789\n• 🩺 Clínica Miraflores: +51 1 555 7890",
+    "Pachacamac": "• 🏥 Centro de Salud Pachacamac: +51 1 990 1122\n• 🩺 Clínica Rural Pachacamac: +51 1 101 2233",
+    "Pucusana": "• 🏥 Hospital Pucusana: +51 1 223 3344\n• 🩺 Clínica Pucusana: +51 1 334 4455",
+    "Puente Piedra": "• 🏥 Hospital Puente Piedra: +51 1 334 5566\n• 🩺 Clínica Ciudad Salud: +51 1 445 6677",
+    "Pueblo Libre": "• 🏥 Centro Médico Pueblo Libre: +51 1 445 7788\n• 🩺 Clínica Pueblo Libre: +51 1 556 8899",
+    "Punta Hermosa": "• 🏥 Centro de Salud Punta Hermosa: +51 1 556 9900\n• 🩺 Clínica Punta Hermosa: +51 1 667 0011",
+    "Punta Negra": "• 🏥 Centro de Salud Punta Negra: +51 1 667 1122\n• 🩺 Clínica Punta Negra: +51 1 778 2233",
+    "Rímac": "• 🏥 Hospital Rímac: +51 1 778 3344\n• 🩺 Clínica Rímac: +51 1 889 4455",
+    "San Bartolo": "• 🏥 Centro de Salud San Bartolo: +51 1 889 5566\n• 🩺 Clínica San Bartolo: +51 1 990 6677",
+    "San Borja": "• 🏥 Hospital San Borja: +51 1 990 7788\n• 🩺 Clínica Borja Médica: +51 1 101 8899",
+    "San Isidro": "• 🏥 Hospital San Isidro: +51 1 278 9700\n• 🩺 Clínica Internacional San Isidro: +51 1 279 0800",
+    "San Juan de Lurigancho": "• 🏥 Hospital San Juan de Lurigancho: +51 1 355 6445\n• 🩺 Clínica San Juan: +51 1 366 7556",
+    "San Juan de Miraflores": "• 🏥 Centro de Salud San Juan de Miraflores: +51 1 336 5566\n• 🩺 Clínica Miraflores Sur: +51 1 347 6677",
+    "San Luis": "• 🏥 Clínica San Luis: +51 1 418 6655\n• 🩺 Centro Médico San Luis: +51 1 429 7766",
+    "San Martín de Porres": "• 🏥 Hospital San Martín de Porres: +51 1 410 4400\n• 🩺 Clínica Martinense: +51 1 421 5511",
+    "San Miguel": "• 🏥 Hospital San Miguel: +51 1 264 7999\n• 🩺 Clínica Miguel: +51 1 275 8000",
+    "Santa Anita": "• 🏥 Centro de Salud Santa Anita: +51 1 412 7890\n• 🩺 Clínica Anita: +51 1 423 8901",
+    "Santa María del Mar": "• 🏥 Clínica Santa María: +51 1 421 2345\n• 🩺 Centro Médico Mar: +51 1 432 3456",
+    "Santa Rosa": "• 🏥 Centro de Salud Santa Rosa: +51 1 432 4567\n• 🩺 Clínica Rosa Vida: +51 1 443 5678",
+    "Santiago de Surco": "• 🏥 Hospital Surco: +51 1 540 0066\n• 🩺 Clínica Surco Salud: +51 1 551 1177",
+    "Surquillo": "• 🏥 Centro de Psicología Surquillo: +51 1 447 1212\n• 🩺 Clínica Surquillo: +51 1 458 2323",
+    "Villa El Salvador": "• 🏥 Hospital VES: +51 1 537 1100\n• 🩺 Clínica El Salvador: +51 1 548 2211",
+    "Villa María del Triunfo": "• 🏥 Centro Medicina VMT: +51 1 537 1101\n• 🩺 Clínica María del Triunfo: +51 1 548 3322"
+  },
   "opciones_504": [
     {
-      "texto": "No, gracias 🙏",
+      "texto": "🙏 Gracias",
       "siguiente": "id_1003"
     },
     {
-      "texto": "Regresar ↩️",
+      "texto": "↩️ Regresar",
       "siguiente": "id_1004"
     }
   ],
+
   "id_505": "redactar_mensaje",
-  "mensaje_505": "¿Qué te parece este mensaje? 💬\n\n“Hola [nombre], estoy pasando un momento difícil y me ayudaría mucho hablar contigo.\n¿Tienes un momento para mí?”\n\n¿Quieres enviarlo o editarlo?",
+  "mensaje_505": "¿Qué te parece este mensaje? 💬\n\n“Hola {nombreContacto}, estoy pasando un momento difícil y me ayudaría mucho hablar contigo.\n¿Tienes un momento para mí?”\n\n¿Quieres enviarlo o editarlo?",
   "opciones_505": [
     {
       "texto": "Enviar tal cual 📤",
       "siguiente": "id_506",
-      "correoContactoEmergencia": "correoContactoEmergencia"
+      "correoContactoEmergencia": "{correoContactoEmergencia}"
     },
     {
       "texto": "Yo mismo mandaré mi mensaje ✏️",
