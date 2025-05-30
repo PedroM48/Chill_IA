@@ -83,36 +83,60 @@
     "opciones_10061": [
       { "texto": "Estoy listo 😉",   
         "siguiente": "id_10064",
-        "multimedia": "" }
+        "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/box_breathing.gif"
+      } }
     ],
     "id_10062":"solo_relajarme_rato_sonidos_relajantes",
     "mensaje_10062":"Elige tu mood 😎:",
     "opciones_10062": [
       { "texto": "🎧 Lluvia suave",   
         "siguiente": "id_10064",
-        "multimedia": "" },
+        "multimedia": {
+    "tipo": "audio",
+    "archivo": "audios/lluvia_suave.wav"
+  } },
       { "texto": "🌊 Olas del mars",     
         "siguiente": "id_10064",
-        "multimedia": "" },
+        "multimedia": {
+    "tipo": "audio",
+    "archivo": "audios/Olas_del_mar.wav"
+  } },
       { "texto": "🔥 Fuego de chimenea",     
         "siguiente": "id_10064",
-        "multimedia": "" },
+        "multimedia": {
+    "tipo": "audio",
+    "archivo": "audios/Fuego_de_chimenea.mp3"
+  } },
       { "texto": "🔔 Cuencos tibetanos",     
         "siguiente": "id_10064",
-        "multimedia": "" }
+        "multimedia": {
+    "tipo": "audio",
+    "archivo": "audios/Cuencos_tibetanos.wav"
+  } }
     ],
     "id_10063":"solo_relajarme_rato_video",
     "mensaje_10063":"Te dejo este video cortito para que te desconectes un rato 👇:",
     "opciones_10063": [
       { "texto": "🎴Video corto de naturaleza + música suave",
         "siguiente": "id_10064",
-        "multimedia": "" },
+        "multimedia": {
+        "tipo": "video",
+        "archivo": "videos/bosque tranquilo.mp4"
+      } },
       { "texto": "💡Animación relajante",     
         "siguiente": "id_10064",
-        "multimedia": "" },
+        "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/gif_circulo.gif"
+      } },
       { "texto": "💫Timelapse del cielo o naturaleza",     
         "siguiente": "id_10064",
-        "multimedia": "" }
+        "multimedia": {
+        "tipo": "video",
+        "archivo": "videos/sky timelapse.mp4"
+      } }
     ],
     "id_10064":"solo_relajarme_rato_evaluacion",
     "mensaje_10064":"¿Te sientes un poco mejor? Puedes volver cuando quieras o seguir relajándote un rato más.",

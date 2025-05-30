@@ -4,13 +4,19 @@
   "opciones_310": [
     {
       "texto": "Inhala suave por la nariz contando 4…\nRetén el aire 7…\nSuelta por la boca en 8 segundos, como si empañaras un cristal.\nRepetimos 4 veces. Yo llevo la cuenta contigo. Listo, vamos… 4-7-8…🌬️",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/repiracion_478.gif"
+      },
       "siguiente": "id_1002",
       "nextAfterEval": "id_311"
     },
     {
       "texto": "Mira este video mientras respiramos juntos. Las animaciones te van a marcar cuándo inhalar, sostener y exhalar. Respira al ritmo del círculo.🌬️\nUn círculo que se expande (inhala), se queda quieto (retén), se contrae (exhala). Texto breve en pantalla: \"Inhala\" / \"Retén\" / \"Exhala\".",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/inspira_expira_circulo.gif"
+      },
       "siguiente": "id_1002",
       "nextAfterEval": "id_311"
     }
@@ -21,7 +27,10 @@
   "opciones_311": [
     {
       "texto": "Inhala mientras el punto sube.\nMantén mientras avanza en la parte superior.\nExhala cuando baja.\nMantén sin aire en la base.",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/box_breathing.gif"
+      },
       "siguiente": "id_1002",
       "nextAfterEval": "id_312"
     },
@@ -38,7 +47,10 @@
   "opciones_312": [
     {
       "texto": "1. Cruza los antebrazos sobre el pecho, manos en los hombros.\n2. Da golpecitos alternos (izq-der) a ritmo lento.\n3. Respira suave mientras cuentas hasta 20 golpes. 🦋",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/blue_butterfly_2.gif"
+      },
       "siguiente": "id_1002",
       "nextAfterEval": "?"
     },
@@ -56,13 +68,19 @@
   "opciones_313": [
     {
       "texto": "Te dejo este sonido de lluvia para que la escuches mientras te tomas un momento para ti. 🌧️",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "audio",
+        "archivo": "audios/lluvia.mp3"
+      },
       "siguiente": "id_999",
       "nextAfterEval": "id_24"
     },
     {
       "texto": "Visualiza en tu mente el viento suave de la playa y el sonido de las olas relajantes. 🌊",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "audio",
+        "archivo": "audios/relaxing_at_sea.mp3"
+      },
       "siguiente": "id_999",
       "nextAfterEval": "id_24"
     }
@@ -79,7 +97,10 @@
     },
     {
       "texto": "Video de bosque tranquilo con voz susurrada (texto en pantalla “Vuelve a la respiración”) 🌳",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "video",
+        "archivo": "videos/bosque tranquilo 2.mp4"
+      },
       "siguiente": "id_999",
       "nextAfterEval": "id_25"
     }

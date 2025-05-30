@@ -114,3 +114,21 @@
 .option-btn:active {
   transform: scale(0.97);
 }
+
+.media-area {
+  margin: 10px;
+  text-align: center;
+}
+
+.media-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.media-area audio,
+.media-area video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}

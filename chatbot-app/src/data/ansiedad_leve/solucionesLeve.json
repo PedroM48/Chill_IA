@@ -4,7 +4,10 @@
   "opciones_210": [
     {
       "texto": "Puedes mirar esta animación y seguir el ritmo. Inhala cuando se expanda… exhala cuando se contraiga 😮‍💨",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "gifs/globo.gif"
+      },
       "siguiente": "id_1002",
       "nextAfterEval": "id_211"
     },
@@ -16,7 +19,10 @@
     },
     {
       "texto": "Aquí tienes una imagen para ayudarte a ubicar cómo debería sentirse la respiración. Trata de llevar el aire ahí, al abdomen, no al pecho. 🫂",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "imagen",
+        "archivo": "image/Respiracion_diafragmatica.png"
+      } ,
       "siguiente": "id_1002",
       "nextAfterEval": "id_211"
     }
@@ -45,6 +51,10 @@
     },
     {
       "texto": "Realizar estiramientos.",
+      "multimedia": {
+        "tipo": "video",
+        "archivo": "videos/estiramiento.mp4"
+      } ,
       "siguiente": "id_1002",
       "nextAfterEval": "?"
     }
@@ -57,12 +67,18 @@
   "opciones_213": [
     {
       "texto": "Te dejo esta canción instrumental relajante para que la escuches mientras te tomas un momento para ti. 🎶🎧",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "audio",
+        "archivo": "audios/weightless.wav"
+      },
       "siguiente": "id_204"
     },
     {
       "texto": "Cuando sientas que necesitas bajar el ritmo, poner una canción instrumental puede ayudarte a relajarte y despejar la mente. 🎶🎧",
-      "multimedia": "",
+      "multimedia": {
+        "tipo": "audio",
+        "archivo": "audios/Flying.wav"
+      },
       "siguiente": "id_204"
     }
   ],
