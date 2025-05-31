@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./RegisterPage.css";
+import { API_BASE_URL } from "../utils/api";
+
 
 const distritosLima = [
   "Ate",
@@ -168,8 +170,21 @@ const RegisterPage = () => {
     e.preventDefault();
 
     if (validate()) {
-      alert("Registro exitoso! Ahora puedes iniciar sesión.");
-      navigate("/");
+      fetch(`${API_BASE_URL}/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      })
+        .then(res => res.json())
+        .then(data => {
+         if (data.userId) {
+           alert("Registro exitoso");
+           navigate("/");
+         } else {
+            alert(data.message || "Error en registro");
+         }
+        })
+        .catch(() => alert("Error de conexión"));
     }
   };
 

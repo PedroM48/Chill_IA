@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./InicioPage.css";
+import { API_BASE_URL } from "../utils/api";
+
 
 const InicioPage = () => {
   const navigate = useNavigate();
@@ -46,10 +48,27 @@ const InicioPage = () => {
       return;
     }
 
-    navigate("/main");
-  };
+    fetch(`${API_BASE_URL}/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+      email: formData.usuario,
+      password: formData.password
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.token) {
+        localStorage.setItem("token", data.token); // guarda el token
+        navigate("/main");
+      } else {
+        setError(data.message || "Error en login");
+      }
+    })
+    .catch(() => setError("Error de conexión"));;
+    };  
 
-  const handleRegister = () => {
+    const handleRegister = () => {
     navigate("/register");
   };
 
