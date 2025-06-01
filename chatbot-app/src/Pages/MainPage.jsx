@@ -326,7 +326,7 @@ export default function MainPage() {
 
   return (
     <div className="chat-container">
-      <h1>CHILL IA 🤙</h1>
+      <h1>CHILL IA 🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙🤙</h1>
       <div className="chat-box">
         {messages.map((msg, i) => (
           <div key={i} className={`message-row ${msg.from}`}>
