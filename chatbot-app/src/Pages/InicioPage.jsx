@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+// src/pages/InicioPage.jsx
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 import "./InicioPage.css";
 import { API_BASE_URL } from "../utils/api";
 
-
 const InicioPage = () => {
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext); // 👈 importamos login desde el contexto
 
   const [formData, setFormData] = useState({
     usuario: "",
     password: "",
   });
-
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value});
+    setFormData({ ...formData, [e.target.name]: e.target.value });
     setError("");
   };
 
@@ -25,22 +26,19 @@ const InicioPage = () => {
   };
 
   const validatePassword = (password) => {
-    // Mínimo 6 caracteres, al menos 1 letra y 1 número
     const regex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
     return regex.test(password);
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!formData.usuario || !formData.password) {
       setError("Por favor ingresa usuario y contraseña");
       return;
     }
-
     if (!validateEmail(formData.usuario)) {
       setError("El usuario debe ser un correo válido de aloe.ulima.edu.pe");
       return;
     }
-
     if (!validatePassword(formData.password)) {
       setError(
         "La contraseña debe tener al menos 6 caracteres, una letra y un número"
@@ -48,27 +46,19 @@ const InicioPage = () => {
       return;
     }
 
-    fetch(`${API_BASE_URL}/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-      email: formData.usuario,
-      password: formData.password
-      })
-    })
-    .then(res => res.json())
-    .then(data => {
-      if (data.token) {
-        localStorage.setItem("token", data.token); // guarda el token
-        navigate("/main");
-      } else {
-        setError(data.message || "Error en login");
-      }
-    })
-    .catch(() => setError("Error de conexión"));;
-    };  
+    try {
+      // 1) Llamamos a login(email, password) del contexto
+      await login(formData.usuario, formData.password);
 
-    const handleRegister = () => {
+      // 2) Esperamos a que el AuthProvider haga el GET /profile y cargue userInfo
+      //    (es posible que tardes algo de milisegundos). Luego navegamos:
+      navigate("/main");
+    } catch (err) {
+      setError(err.message || "Error en login");
+    }
+  };
+
+  const handleRegister = () => {
     navigate("/register");
   };
 

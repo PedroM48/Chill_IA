@@ -9,6 +9,8 @@ app.use(cors()); // 👈 habilita CORS para todos los orígenes
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
+app.use("/api/helpEmail", require("./routes/helpEmailRoutes"));
+
 
 const PORT = process.env.PORT || 4000;
 sequelize.sync()
