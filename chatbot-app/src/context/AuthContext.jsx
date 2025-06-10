@@ -2,6 +2,8 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
+import { API_BASE_URL } from "../config";
+
 export const AuthContext = createContext({ token: null, userInfo: null });
 
 export function AuthProvider({ children }) {
@@ -13,7 +15,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     if (!token) return;                             // no hay token ⇒ no perfil
     axios
-      .get("http://localhost:4000/api/auth/profile", {
+      .get(`${API_BASE_URL}/profile`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -32,7 +34,7 @@ export function AuthProvider({ children }) {
   // 3) Funciones de login / logout
   const login = async (email, password) => {
     const { data } = await axios.post(
-      "http://localhost:4000/api/auth/login",
+      "`${API_BASE_URL}/login`",
       { email, password }
     );
     setToken(data.token);
