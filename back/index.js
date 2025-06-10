@@ -5,7 +5,14 @@ const authRoutes = require('./routes/authRoutes');
 require('dotenv').config();
 
 const app = express();
-app.use(cors()); // 👈 habilita CORS para todos los orígenes
+const corsOptions = {
+  origin: "https://chill-ia.onrender.com", // el dominio de tu frontend
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
