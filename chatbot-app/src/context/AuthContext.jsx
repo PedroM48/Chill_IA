@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
   // 3) Funciones de login / logout
   const login = async (email, password) => {
     const { data } = await axios.post(
-      "`${API_BASE_URL}/login`",
+      `${API_BASE_URL}/login`,
       { email, password }
     );
     setToken(data.token);
