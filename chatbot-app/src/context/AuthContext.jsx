@@ -15,7 +15,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     if (!token) return;                             // no hay token ⇒ no perfil
     axios
-      .get(`${API_BASE_URL}/profile`, {
+      .get(`${API_BASE_URL}/auth/profile`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
   // 3) Funciones de login / logout
   const login = async (email, password) => {
     const { data } = await axios.post(
-      `${API_BASE_URL}/login`,
+      `${API_BASE_URL}/auth/login`,
       { email, password }
     );
     setToken(data.token);
