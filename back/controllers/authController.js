@@ -36,7 +36,7 @@ exports.login = async (req, res) => {
     const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.json({ token });
   } catch (err) {
-    console.error(err);
+    console.error({ message: 'Usuario no encontrado' });
     res.status(500).json({ message: 'Error en servidor' });
   }
 };

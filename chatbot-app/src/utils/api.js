@@ -1,1 +1,1 @@
-export const API_BASE_URL = "http://localhost:4000/api/auth";
+export const API_BASE_URL = "http://localhost:4000/api";

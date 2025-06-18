@@ -170,7 +170,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     if (validate()) {
-      fetch(`${API_BASE_URL}/register`, {
+      fetch(`${API_BASE_URL}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
