@@ -457,8 +457,8 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-    );
-  }
+    )
+  };
 
   // ─── 9. Chat UI ────────────────────────────────────────────────
   return (
