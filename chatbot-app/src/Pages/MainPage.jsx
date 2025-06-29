@@ -77,6 +77,7 @@ export default function MainPage() {
 
   const parseBotText = (rawText) => {
   return rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
+  const normalizar = (s = "") => s.trim().toLowerCase();
 };
   
   // ─── 1. Primer mensaje ─────────────────────────────────────────
