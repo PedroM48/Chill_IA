@@ -75,8 +75,9 @@ export default function MainPage() {
     }).catch((err) => console.warn("Error logging event", err));
   };
 
-  const parseBotText = (rawText) => rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
-};
+  const parseBotText = (rawText) =>
+  rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
+}
   
   // ─── 1. Primer mensaje ─────────────────────────────────────────
   useEffect(() => {
@@ -457,8 +458,8 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-    )
-  };
+    );
+  }
 
   // ─── 9. Chat UI ────────────────────────────────────────────────
   return (
