@@ -22,8 +22,8 @@
     }
   ],
   "id_411": "terapia_aceptacion_compromiso",
-  "mensaje_31": "Observa la ansiedad sin pelear; identifica un valor importante (familia, salud, creatividad) y da un paso pequeño hacia él, incluso con miedo presente. 🎯💪",
-  "opciones_31": [
+  "mensaje_411": "Observa la ansiedad sin pelear; identifica un valor importante (familia, salud, creatividad) y da un paso pequeño hacia él, incluso con miedo presente. 🎯💪",
+  "opciones_411": [
     {
       "texto": "Elige tu valor importante y planifica una acción de 5 min para hacer con ellos hoy. Si deseas llámalos o escríbeles y comprométete en realizarlo. ✅",
       "multimedia": "",
@@ -44,8 +44,8 @@
     }
   ],
   "id_412": "relajacion_muscular_progresiva",
-  "mensaje_32": "Al tensar y soltar grupos musculares, envías al cerebro señales de seguridad. Practicaremos de cabeza a pies, liberando tensión acumulada. 💤🦶",
-  "opciones_32": [
+  "mensaje_412": "Al tensar y soltar grupos musculares, envías al cerebro señales de seguridad. Practicaremos de cabeza a pies, liberando tensión acumulada. 💤🦶",
+  "opciones_412": [
     {
       "texto": "Durante 8 min; con cada campana indica “estira, tensa 5 s, suelta 7 s”. 🎧",
       "multimedia": "",
@@ -59,8 +59,8 @@
     }
   ],
   "id_413": "respiracion_alternada_fosas",
-  "mensaje_33": "Para empezar, probemos una respiración muy potente: alternar fosas nasales equilibra tu sistema nervioso y despeja la mente en pocos minutos. ¿Te animas a intentarlo ahora mismo? 🫂",
-  "opciones_33": [
+  "mensaje_413": "Para empezar, probemos una respiración muy potente: alternar fosas nasales equilibra tu sistema nervioso y despeja la mente en pocos minutos. ¿Te animas a intentarlo ahora mismo? 🫂",
+  "opciones_413": [
     {
       "texto": "Tendrás que colocar un dedo tapando una fosa nasal, inhalas y exhalas durante un par de segundo despacio, luego alternas con la otra fosa y así.",
       "multimedia": "",
