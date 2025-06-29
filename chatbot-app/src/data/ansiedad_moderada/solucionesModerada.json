@@ -69,7 +69,7 @@
       "texto": "Te dejo este sonido de lluvia para que la escuches mientras te tomas un momento para ti. 🌧️",
       "multimedia": {
         "tipo": "audio",
-        "archivo": "audios/lluvia.mp3"
+        "archivo": "audios/lluvia2.mp3"
       },
       "siguiente": "id_1010",
       "confirmacion": "id_304"  
