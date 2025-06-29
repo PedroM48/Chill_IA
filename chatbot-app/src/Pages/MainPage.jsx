@@ -444,22 +444,6 @@ export default function MainPage() {
     );
   };
 
-  // ─── 8. Loader mientras llega perfil ───────────────────────────
-  if (!userInfo?.distrito) {
-    return (
-      <div className="chat-container">
-        <h1>CHILL IA 🤙</h1>
-        <div className="chat-box">
-          <div className="message-row bot">
-            <img src={botAvatar} className="avatar" alt="Bot" />
-            <div className="bubble bot">
-              <span>Cargando tu perfil…</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   // ─── 9. Chat UI ────────────────────────────────────────────────
   return (
