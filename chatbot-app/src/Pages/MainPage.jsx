@@ -61,7 +61,7 @@ export default function MainPage() {
   const [mediaActual, setMediaActual] = useState(null);
   const [solutionVisits, setSolutionVisits] = useState({});
   const [currentLevelPrefix, setCurrentLevelPrefix] = useState(null); // 2=leve, 3=moderada, 4=severa
-
+  const normalizar = (s = "") => s.trim().toLowerCase();
   // ─── Helpers ───────────────────────────────────────────────────
   const logEvent = (event, metadata = {}) => {
     if (!chatSessionId) return;
@@ -75,9 +75,7 @@ export default function MainPage() {
     }).catch((err) => console.warn("Error logging event", err));
   };
 
-  const parseBotText = (rawText) => {
-  return rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
-  const normalizar = (s = "") => s.trim().toLowerCase();
+  const parseBotText = (rawText) => rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
 };
   
   // ─── 1. Primer mensaje ─────────────────────────────────────────
