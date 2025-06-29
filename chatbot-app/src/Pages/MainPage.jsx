@@ -77,7 +77,6 @@ export default function MainPage() {
 
   const parseBotText = (rawText) =>
   rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
-}
   
   // ─── 1. Primer mensaje ─────────────────────────────────────────
   useEffect(() => {
