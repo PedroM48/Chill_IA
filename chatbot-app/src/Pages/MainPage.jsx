@@ -75,13 +75,14 @@ export default function MainPage() {
     }).catch((err) => console.warn("Error logging event", err));
   };
 
+  const parseBotText = (rawText) => {
+  return rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
+};
+  
   // ─── 1. Primer mensaje ─────────────────────────────────────────
   useEffect(() => {
     if (!userInfo?.nombre) return;
-    const saludo = flows[`mensaje_${INITIAL_ID.split("_")[1]}`].replace(
-      "{nombreUsuario}",
-      userInfo.nombre
-    );
+    const saludo = parseBotText(flows[`mensaje_${INITIAL_ID.split("_")[1]}`]);
     setMessages([{ from: "bot", text: saludo }]);
     setCurrentId(INITIAL_ID);
   }, [userInfo]);
@@ -250,6 +251,53 @@ export default function MainPage() {
         return;
       }
 
+      if (opt.siguiente === "id_503") {
+  // 1) Disparamos el POST al backend con el correo de emergencia
+  fetch(`${API_URL}/helpEmail`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      to: opt.correoContactoEmergencia
+    }),
+  })
+    .then((r) =>
+      r.ok
+        ? r.json()
+        : Promise.reject()
+    )
+    .then(() => {
+      setMessages((prev) => [
+        ...prev,
+        {
+          from: "bot",
+          // id_504 es el mensaje de “✅ ¡Listo! Mensaje enviado…” definido en mensajesEmergencia.json
+          text: parseBotText(flows["mensaje_504"]),
+        },
+      ]);
+      setCurrentId("id_504");    // avanzamos al nodo 504
+    })
+    .catch(() => {
+      setMessages((prev) => [
+        ...prev,
+        {
+          from: "bot",
+          text: "😕 No pude enviar el correo. Inténtalo de nuevo más tarde.",
+        },
+      ]);
+      // si lo prefieres puedes regresar a la misma pregunta 503 o ir a cierre:
+      setCurrentId("id_503");
+    })
+    .finally(() => {
+      setTyping(false);
+    });
+
+  return; // Salimos antes de llegar al flujo genérico
+}
+
+      
       /* ── 6.4 Progreso GAD-7 ─────────────────────────────────── */
       if (isGadFlow) {
         const newScores = [...scores, opt.score];
@@ -303,6 +351,31 @@ export default function MainPage() {
 
       /* ── 6.6 Flujo normal / cierre ─────────────────────────── */
       if (opt.siguiente) {
+        const nextId = opt.siguiente;
+          if (nextId === "id_504") {
+    const rawMsg = flows.mensaje_504;
+    const ubicaciones = flows.ubicaciones_504 || {};
+    // normalizar claves y distrito
+    const mapa = Object.fromEntries(
+      Object.entries(ubicaciones).map(([k, v]) => [normalizar(k), v])
+    );
+    const distritoKey = normalizar(userInfo.distrito);
+    const texto =
+      mapa[distritoKey] ||
+      "No se encontraron contactos para tu ubicación.";
+    // reemplaza placeholder y también nombreUsuario si quieres
+    const finalMsg = parseBotText(
+     rawMsg.replace("{ubicaciones}", texto)
+    );
+
+    setMessages((prev) => [
+      ...prev,
+      { from: "bot", text: finalMsg }
+    ]);
+    setCurrentId(nextId);
+    setTyping(false);
+    return;
+    }
         setMessages((prev) => [
           ...prev,
           {
