@@ -37,7 +37,6 @@ const flows = {
 
 export default function MainPage() {
   const { userInfo } = useContext(AuthContext);
-  console.log("userInfo:", userInfo);
   const token = localStorage.getItem("jwt");
   const INITIAL_ID = "id_1004";
 
@@ -62,7 +61,7 @@ export default function MainPage() {
   const [mediaActual, setMediaActual] = useState(null);
   const [solutionVisits, setSolutionVisits] = useState({});
   const [currentLevelPrefix, setCurrentLevelPrefix] = useState(null); // 2=leve, 3=moderada, 4=severa
-  const normalizar = (s = "") => s.trim().toLowerCase();
+
   // ─── Helpers ───────────────────────────────────────────────────
   const logEvent = (event, metadata = {}) => {
     if (!chatSessionId) return;
@@ -76,13 +75,13 @@ export default function MainPage() {
     }).catch((err) => console.warn("Error logging event", err));
   };
 
-  const parseBotText = (rawText) =>
-  rawText.replace("{nombreUsuario}", userInfo?.nombre || "");
-  
   // ─── 1. Primer mensaje ─────────────────────────────────────────
   useEffect(() => {
     if (!userInfo?.nombre) return;
-    const saludo = parseBotText(flows[`mensaje_${INITIAL_ID.split("_")[1]}`]);
+    const saludo = flows[`mensaje_${INITIAL_ID.split("_")[1]}`].replace(
+      "{nombreUsuario}",
+      userInfo.nombre
+    );
     setMessages([{ from: "bot", text: saludo }]);
     setCurrentId(INITIAL_ID);
   }, [userInfo]);
@@ -251,35 +250,6 @@ export default function MainPage() {
         return;
       }
 
-      if (opt.siguiente === "id_506") {
-    // 1) Hacer POST al backend
-  fetch("http://localhost:4000/api/helpEmail", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`, // o "token"
-    },
-  })
-    .then((r) => r.ok ? r.json() : Promise.reject())
-    .then(() => {
-      setMessages((prev) => [
-        ...prev,
-        { from: "bot", text: "✅ ¡Listo! He enviado el mensaje a tu contacto. 💌" },
-      ]);
-    })
-    .catch(() => {
-      setMessages((prev) => [
-        ...prev,
-        { from: "bot", text: "😕 No pude enviar el correo. Inténtalo de nuevo más tarde." },
-      ]);
-    });
-
-  setCurrentId("id_1009");        // o a donde quieras volver
-  setTyping(false);
-  return;
-}
-
-      
       /* ── 6.4 Progreso GAD-7 ─────────────────────────────────── */
       if (isGadFlow) {
         const newScores = [...scores, opt.score];
@@ -333,31 +303,6 @@ export default function MainPage() {
 
       /* ── 6.6 Flujo normal / cierre ─────────────────────────── */
       if (opt.siguiente) {
-        const nextId = opt.siguiente;
-          if (nextId === "id_504") {
-    const rawMsg = flows.mensaje_504;
-    const ubicaciones = flows.ubicaciones_504 || {};
-    // normalizar claves y distrito
-    const mapa = Object.fromEntries(
-      Object.entries(ubicaciones).map(([k, v]) => [normalizar(k), v])
-    );
-    const distritoKey = normalizar(userInfo.distrito);
-    const texto =
-      mapa[distritoKey] ||
-      "No se encontraron contactos para tu ubicación.";
-    // reemplaza placeholder y también nombreUsuario si quieres
-    const finalMsg = parseBotText(
-     rawMsg.replace("{ubicaciones}", texto)
-    );
-
-    setMessages((prev) => [
-      ...prev,
-      { from: "bot", text: finalMsg }
-    ]);
-    setCurrentId(nextId);
-    setTyping(false);
-    return;
-    }
         setMessages((prev) => [
           ...prev,
           {
@@ -426,6 +371,22 @@ export default function MainPage() {
     );
   };
 
+  // ─── 8. Loader mientras llega perfil ───────────────────────────
+  if (!userInfo?.distrito) {
+    return (
+      <div className="chat-container">
+        <h1>CHILL IA 🤙</h1>
+        <div className="chat-box">
+          <div className="message-row bot">
+            <img src={botAvatar} className="avatar" alt="Bot" />
+            <div className="bubble bot">
+              <span>Cargando tu perfil…</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // ─── 9. Chat UI ────────────────────────────────────────────────
   return (
