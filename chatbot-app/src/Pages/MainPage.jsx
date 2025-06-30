@@ -37,6 +37,7 @@ const flows = {
 
 export default function MainPage() {
   const { userInfo } = useContext(AuthContext);
+  console.log("userInfo:", userInfo);
   const token = localStorage.getItem("jwt");
   const INITIAL_ID = "id_1004";
 
