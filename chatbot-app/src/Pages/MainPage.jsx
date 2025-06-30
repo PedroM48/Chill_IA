@@ -261,7 +261,7 @@ export default function MainPage() {
     },
   })
     .then((r) => r.ok ? r.json() : Promise.reject())
-    .then(() => {Add commentMore actions
+    .then(() => {
       setMessages((prev) => [
         ...prev,
         { from: "bot", text: "✅ ¡Listo! He enviado el mensaje a tu contacto. 💌" },
