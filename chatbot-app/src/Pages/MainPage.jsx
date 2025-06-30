@@ -250,7 +250,7 @@ export default function MainPage() {
         return;
       }
 
-      if (opt.siguiente === "id_503") {
+      if (opt.siguiente === "id_506") {
   // 1) Disparamos el POST al backend con el correo de emergencia
   fetch(`${API_URL}/helpEmail`, {
     method: "POST",
@@ -287,7 +287,7 @@ export default function MainPage() {
         },
       ]);
       // si lo prefieres puedes regresar a la misma pregunta 503 o ir a cierre:
-      setCurrentId("id_503");
+      setCurrentId("id_1009");
     })
     .finally(() => {
       setTyping(false);
