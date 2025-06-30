@@ -251,49 +251,31 @@ export default function MainPage() {
       }
 
       if (opt.siguiente === "id_506") {
-  // 1) Disparamos el POST al backend con el correo de emergencia
-  fetch(`${API_URL}/helpEmail`, {
+    // 1) Hacer POST al backend
+  fetch("http://localhost:4000/api/helpEmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`, // o "token"
     },
-    body: JSON.stringify({
-      to: opt.correoContactoEmergencia
-    }),
   })
-    .then((r) =>
-      r.ok
-        ? r.json()
-        : Promise.reject()
-    )
-    .then(() => {
+    .then((r) => r.ok ? r.json() : Promise.reject())
+    .then(() => {Add commentMore actions
       setMessages((prev) => [
         ...prev,
-        {
-          from: "bot",
-          // id_504 es el mensaje de “✅ ¡Listo! Mensaje enviado…” definido en mensajesEmergencia.json
-          text: parseBotText(flows["mensaje_504"]),
-        },
+        { from: "bot", text: "✅ ¡Listo! He enviado el mensaje a tu contacto. 💌" },
       ]);
-      setCurrentId("id_504");    // avanzamos al nodo 504
     })
     .catch(() => {
       setMessages((prev) => [
         ...prev,
-        {
-          from: "bot",
-          text: "😕 No pude enviar el correo. Inténtalo de nuevo más tarde.",
-        },
+        { from: "bot", text: "😕 No pude enviar el correo. Inténtalo de nuevo más tarde." },
       ]);
-      // si lo prefieres puedes regresar a la misma pregunta 503 o ir a cierre:
-      setCurrentId("id_1009");
-    })
-    .finally(() => {
-      setTyping(false);
     });
 
-  return; // Salimos antes de llegar al flujo genérico
+  setCurrentId("id_1009");        // o a donde quieras volver
+  setTyping(false);
+  return;
 }
 
       
