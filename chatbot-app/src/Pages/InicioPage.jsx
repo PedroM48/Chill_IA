@@ -20,11 +20,6 @@ const InicioPage = () => {
     setError("");
   };
 
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@aloe\.ulima\.edu\.pe$/;
-    return regex.test(email);
-  };
-
   const validatePassword = (password) => {
     const regex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
     return regex.test(password);
@@ -35,10 +30,7 @@ const InicioPage = () => {
       setError("Por favor ingresa usuario y contraseña");
       return;
     }
-    if (!validateEmail(formData.usuario)) {
-      setError("El usuario debe ser un correo válido de aloe.ulima.edu.pe");
-      return;
-    }
+
     if (!validatePassword(formData.password)) {
       setError(
         "La contraseña debe tener al menos 6 caracteres, una letra y un número"
