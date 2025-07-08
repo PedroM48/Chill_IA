@@ -1,6 +1,6 @@
 {
   "id_500": "emergencia_inicio",
-  "mensaje_500": "{nombreUsuario} siento mucho que ninguna técnica haya funcionado hasta ahora. 😞\nLo más importante es tu seguridad y bienestar. ❤️\n¿Qué te gustaría hacer ahora?",
+  "mensaje_500": "Siento mucho que ninguna técnica haya funcionado hasta ahora. 😞\nLo más importante es tu seguridad y bienestar. ❤️\n¿Qué te gustaría hacer ahora?",
   "opciones_500": [
     {
       "texto": "Contactar a un profesional de salud mental 🧑‍⚕️",
@@ -56,7 +56,7 @@
   ],
 
   "id_504": "numeros_contacto",
-  "mensaje_504": "Aquí tienes algunas ubicaciones o contactos cercanos a donde te encuentras:\n{ubicaciones}\n\n¿Necesitas algo más?",
+  "mensaje_504": "Aquí tienes algunas ubicaciones o contactos cercanos a donde te encuentras: Lima\n\n¿Necesitas algo más?",
   "ubicaciones_504": {
     "Ate": "• 🏥 Hospital Ate: +51 1 123 4567\n• 🩺 Clínica Familiar Ate: +51 1 234 5678",
     "Barranco": "• 🏥 Centro de Salud Barranco: +51 1 234 6789\n• 🩺 Clínica Barranco Salud: +51 1 345 7890",
